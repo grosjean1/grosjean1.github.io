@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teachings | Elise Grosjean</title>
+    <link>https://grosjean1.github.io/teaching/</link>
+      <atom:link href="https://grosjean1.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <description>Teachings</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://grosjean1.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Teachings</title>
+      <link>https://grosjean1.github.io/teaching/</link>
+    </image>
+    
+    <item>
+      <title>Tutor at l&#39;école nationale de la statistique et de l&#39;administration économique (ENSAE)</title>
+      <link>https://grosjean1.github.io/teaching/ensae/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/teaching/ensae/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.ensae.fr/courses/analyse-numerique-et-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tutor at Sorbonne université</title>
+      <link>https://grosjean1.github.io/teaching/sorbonne/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/teaching/sorbonne/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ljll.math.upmc.fr/kassab/cours.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;4M026  Approximation des équations aux derivées partielles&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Analyse numérique matricielle&lt;/strong&gt;, TD/TP L3.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Analyse numérique pour les EDO&lt;/strong&gt;, TP L3.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://python.guillod.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Programmation Python&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
