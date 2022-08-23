@@ -7,13 +7,13 @@
     <description>Publications</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://grosjean1.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
       <link>https://grosjean1.github.io/publication/</link>
     </image>
     
     <item>
-      <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations</title>
+      <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations (upcoming)</title>
       <link>https://grosjean1.github.io/publication/publi3/</link>
       <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/publication/publi3/</guid>
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations</title>
+      <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
       <link>https://grosjean1.github.io/publication/publi2/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/publication/publi2/</guid>
