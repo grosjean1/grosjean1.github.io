@@ -4,13 +4,9 @@
   
   
   <url>
-    <loc>https://grosjean1.github.io/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/talk/example-talk/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/event/</loc><lastmod>2030-06-01T13:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
     <loc>https://grosjean1.github.io/publication-type/3/</loc><lastmod>2022-08-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://grosjean1.github.io/</loc><lastmod>2022-08-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/publication/publi3/</loc><lastmod>2022-08-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -21,6 +17,8 @@
     <loc>https://grosjean1.github.io/talk/canum-2022/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/talk/canj2022/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://grosjean1.github.io/event/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/talk/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -82,14 +80,4 @@
   <url>
     <loc>https://grosjean1.github.io/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://grosjean1.github.io/teaching/sorbonne/</loc><lastmod>2018-09-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/tag/deep-learning/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/project/example/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/project/</loc><lastmod>2016-04-27T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/publication-type/1/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/publication/example/</loc><lastmod>2013-07-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://grosjean1.github.io/teaching/sorbonne/</loc><lastmod>2018-09-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url></urlset>
