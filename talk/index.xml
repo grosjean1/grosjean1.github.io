@@ -5,23 +5,12 @@
     <link>https://grosjean1.github.io/talk/</link>
       <atom:link href="https://grosjean1.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 13 Jun 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Talks</title>
       <link>https://grosjean1.github.io/talk/</link>
     </image>
-    
-    <item>
-      <title>MAP5 Groupe de travail Modélisation, Analyse, Simulation</title>
-      <link>https://grosjean1.github.io/talk/map5seminaire/</link>
-      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/talk/map5seminaire/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;media/SlidesMAP5.pdf&#34;&gt;&lt;strong&gt;Presentation&lt;/strong&gt;&lt;/a&gt; on the non-intrusive reduced basis 2-grids method applied to sensibility analysis.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>CANUM 2022</title>
