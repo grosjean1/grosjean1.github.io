@@ -5,7 +5,7 @@
     <link>https://grosjean1.github.io/</link>
       <atom:link href="https://grosjean1.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Elise Grosjean</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Elise Grosjean</title>
@@ -13,11 +13,24 @@
     </image>
     
     <item>
+      <title>MAP5 Groupe de travail Modélisation, Analyse, Simulation</title>
+      <link>https://grosjean1.github.io/talk/map5seminaire/</link>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/talk/map5seminaire/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;media/SlidesMAP5.pdf&#34;&gt;&lt;strong&gt;Presentation&lt;/strong&gt;&lt;/a&gt; on the non-intrusive reduced basis 2-grids method applied to sensibility analysis.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutor at Department of Mathematics, TU Kaiserslautern</title>
       <link>https://grosjean1.github.io/teaching/tuk/</link>
       <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/teaching/tuk/</guid>
-      <description></description>
+      <description>&lt;p&gt;Differential-Algebraic Equations
+&lt;a href=&#34;https://www.mathematik.uni-kl.de/en/das/teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
