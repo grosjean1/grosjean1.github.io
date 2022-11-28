@@ -4,11 +4,7 @@
   
   
   <url>
-    <loc>https://grosjean1.github.io/</loc><lastmod>2022-11-23T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/talk/spp2/</loc><lastmod>2022-11-23T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
-  <url>
-    <loc>https://grosjean1.github.io/talk/</loc><lastmod>2022-11-23T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+    <loc>https://grosjean1.github.io/</loc><lastmod>2022-11-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/teaching/</loc><lastmod>2022-11-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -27,6 +23,8 @@
     <loc>https://grosjean1.github.io/talk/canj2022/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/event/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://grosjean1.github.io/talk/</loc><lastmod>2022-06-13T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
     <loc>https://grosjean1.github.io/talk/simulation-and-optimization-for-renewable-marine-energies/</loc><lastmod>2022-05-30T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
@@ -84,4 +82,6 @@
   <url>
     <loc>https://grosjean1.github.io/slides/example/</loc><lastmod>2019-02-05T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
   <url>
-    <loc>https://grosjean1.github.io/teaching/sorbonne/</loc><lastmod>2018-09-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url></urlset>
+    <loc>https://grosjean1.github.io/teaching/sorbonne/</loc><lastmod>2018-09-01T00:00:00+00:00</lastmod><changefreq>weekly</changefreq></url>
+  <url>
+    <loc>https://grosjean1.github.io/talk/spp2/</loc><changefreq>weekly</changefreq></url></urlset>
