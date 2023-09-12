@@ -5,12 +5,24 @@
     <link>https://grosjean1.github.io/talk/</link>
       <atom:link href="https://grosjean1.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Talks</title>
       <link>https://grosjean1.github.io/talk/</link>
     </image>
+    
+    <item>
+      <title>SPP2311-Kick-off</title>
+      <link>https://grosjean1.github.io/talk/spp2/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/talk/spp2/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on the numerical aspects of a Coupled analysis of active biological processes for meniscus tissue regeneration
+&lt;a href=&#34;https://www.spp2311.uni-stuttgart.de/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>GAMM Annual Meeting 2023</title>
