@@ -5,12 +5,28 @@
     <link>https://grosjean1.github.io/</link>
       <atom:link href="https://grosjean1.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Elise Grosjean</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 20 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Elise Grosjean</title>
       <link>https://grosjean1.github.io/</link>
     </image>
+    
+    <item>
+      <title>ICCB2023</title>
+      <link>https://grosjean1.github.io/talk/iccb2023/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/talk/iccb2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ICCB2023</title>
+      <link>https://grosjean1.github.io/talk/iccb2023/</link>
+      <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/talk/iccb2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>SPP2311-Kick-off</title>
