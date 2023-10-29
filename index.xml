@@ -607,5 +607,14 @@ $$&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>Non intrusive reduced basis module.</title>
+      <link>https://grosjean1.github.io/accomplishments/mordicus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/accomplishments/mordicus/</guid>
+      <description>&lt;p&gt;Contribute to an online library with EDF and other partners on non intrusive reduced basis method in Python and C++.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
