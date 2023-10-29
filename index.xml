@@ -590,10 +590,10 @@ $$&lt;/p&gt;
       <link>https://grosjean1.github.io/accomplishments/meniscus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/accomplishments/meniscus/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Biomedical problem: Meniscus regeneration, multiscale modeling of tissue phenomena. \&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;** Implement PDEs in FreeFem++ representing a nonwoven scaffold in a novel 3D printed perfusion chamber which is integrated in a bioreactor that allows in-vitro investigations of scaffolds in interaction with chondrocytes and adipose tissue-derived stem cells \\
+      <description>&lt;p&gt;Biomedical problem: Meniscus regeneration, multiscale modeling of tissue phenomena.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;** Implement PDEs in FreeFem++ representing a nonwoven scaffold in a novel 3D printed perfusion chamber which is integrated in a bioreactor that allows in-vitro investigations of scaffolds in interaction with chondrocytes and adipose tissue-derived stem cells 
 
-    ** Sensitivity analysis of the parameters with model order reduction techniques (compared to real data)&amp;quot;
+    ** Sensitivity analysis of the parameters with model order reduction techniques (compared to real data)
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -603,24 +603,7 @@ $$&lt;/p&gt;
       <link>https://grosjean1.github.io/accomplishments/fem-navierstokes-c&#43;&#43;/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/accomplishments/fem-navierstokes-c&#43;&#43;/</guid>
-      <description>&lt;p&gt;Implement the &lt;a href=&#34;
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-&lt;video controls  &gt;
-  &lt;source src=&#34;https://grosjean1.github.io/media/LJLL.mp4&#34; type=&#34;video/mp4&#34;&gt;
-&lt;/video&gt;&#34;&gt;Finite Elements method&lt;/a&gt; in C++ to solve 2D Navier-Stokes equation in a channel&lt;/p&gt;
+      <description>&lt;p&gt;Implement the Finite Elements method in C++ to solve 2D Navier-Stokes equation in a channel&lt;/p&gt;
 </description>
     </item>
     
