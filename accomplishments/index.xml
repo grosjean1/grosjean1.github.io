@@ -32,8 +32,8 @@
       <link>https://grosjean1.github.io/accomplishments/waveequation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://grosjean1.github.io/accomplishments/waveequation/</guid>
-      <description>&lt;p&gt;Initial conditions reconstruction
-&lt;a href=&#34;media/Wave1D.gif&#34;&gt;Video in 1D&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Initial conditions reconstruction with BFN on a bounded domain [0,1] with Dirichlet bnd conditions, FEM P1 and Newmark scheme for time.
+&lt;a href=&#34;media/Wave1D.gif&#34;&gt;Video in 1D&lt;/a&gt; with an observation of the measurements between [0,0.2] and [0.8,1].&lt;/p&gt;
 </description>
     </item>
     
