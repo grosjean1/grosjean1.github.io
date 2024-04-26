@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 | Elise Grosjean</title>
-    <link>https://grosjean1.github.io/publication-type/2/</link>
-      <atom:link href="https://grosjean1.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <title>2 | Academic</title>
+    <link>https://example.com/publication-type/2/</link>
+      <atom:link href="https://example.com/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>https://grosjean1.github.io/publication-type/2/</link>
+      <link>https://example.com/publication-type/2/</link>
     </image>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations, SMAI: JCM 9 (2023) 227-256</title>
-      <link>https://grosjean1.github.io/publication/publi3/</link>
+      <link>https://example.com/publication/publi3/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi3/</guid>
+      <guid>https://example.com/publication/publi3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961</title>
-      <link>https://grosjean1.github.io/publication/publi1/</link>
+      <link>https://example.com/publication/publi1/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi1/</guid>
+      <guid>https://example.com/publication/publi1/</guid>
       <description></description>
     </item>
     

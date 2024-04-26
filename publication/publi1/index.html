@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en-us" >
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 26, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -8,7 +10,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.6.0 for Hugo" />
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
   
 
   
@@ -62,46 +64,20 @@
 
   
   
-  
-  
-  
-    
-    
-    
-  
-  
-
-  <meta name="author" content="Elise Grosjean" />
-
-  
-  
-  
-    
-  
-  <meta name="description" content="The context of this paper is the simulation of parameter-dependent partial differential equations (PDEs). When the aim is to solve such PDEs for a large number of parameter values, Reduced Basis Methods (RBM) are often used to reduce computational costs of a classical high fidelity code based on Finite Element Method (FEM), Finite Volume (FVM) or Spectral methods. The efficient implementation of most of these RBM requires to modify this high fidelity code, which cannot be done, for example in an industrial context if the high fidelity code is only accessible as a &#34;black-box&#34; solver. The Non-Intrusive Reduced Basis (NIRB) method has been introduced in the context of finite elements as a good alternative to reduce the implementation costs of these parameter-dependent problems. The method is efficient in other contexts than the FEM one, like with finite volume schemes, which are more often used in an industrial environment. In this case, some adaptations need to be done as the degrees of freedom in FV methods have different meanings. At this time, error estimates have only been studied with FEM solvers. In this paper, we present a generalisation of the NIRB method to Finite Volume schemes and we show that estimates established for FEM solvers also hold in the FVM setting. We first prove our results for the hybrid-Mimetic Finite Difference method (hMFD), which is part the Hybrid Mixed Mimetic methods (HMM) family. Then, we explain how these results apply more generally to other FV schemes. Some of them are specified, such as the Two Point Flux Approximation (TPFA)." />
-
-  
-  <link rel="alternate" hreflang="en-us" href="https://grosjean1.github.io/publication/publi1/" />
-
-  
-  
-  
-    <meta name="theme-color" content="#1565c0" />
-  
 
   
   
 
   
 
-  <link rel="stylesheet" href="/css/vendor-bundle.min.c7b8d9abd591ba2253ea42747e3ac3f5.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
 
   
   
   
     
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -116,6 +92,8 @@
 
     
     
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -236,7 +214,11 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.3495fc6150afdd177f1d04fbba9f5e2c.css" />
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
 
   
   
@@ -256,74 +238,111 @@
 
 
 
-  
-
-
-  
-
-
-  
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
 
+
+
+
+
+
+  <meta name="author" content="Elise Grosjean" />
+
+
+
+
+
   
-  
+
+<meta name="description" content="The context of this paper is the simulation of parameter-dependent partial differential equations (PDEs). When the aim is to solve such PDEs for a large number of parameter values, Reduced Basis Methods (RBM) are often used to reduce computational costs of a classical high fidelity code based on Finite Element Method (FEM), Finite Volume (FVM) or Spectral methods. The efficient implementation of most of these RBM requires to modify this high fidelity code, which cannot be done, for example in an industrial context if the high fidelity code is only accessible as a &#34;black-box&#34; solver. The Non-Intrusive Reduced Basis (NIRB) method has been introduced in the context of finite elements as a good alternative to reduce the implementation costs of these parameter-dependent problems. The method is efficient in other contexts than the FEM one, like with finite volume schemes, which are more often used in an industrial environment. In this case, some adaptations need to be done as the degrees of freedom in FV methods have different meanings. At this time, error estimates have only been studied with FEM solvers. In this paper, we present a generalisation of the NIRB method to Finite Volume schemes and we show that estimates established for FEM solvers also hold in the FVM setting. We first prove our results for the hybrid-Mimetic Finite Difference method (hMFD), which is part the Hybrid Mixed Mimetic methods (HMM) family. Then, we explain how these results apply more generally to other FV schemes. Some of them are specified, such as the Two Point Flux Approximation (TPFA)." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/publication/publi1/" />
+<link rel="canonical" href="https://example.com/publication/publi1/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
 
   
   
-    <link rel="manifest" href="/manifest.webmanifest" />
-  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png" />
+
+
 
   
-  <link rel="icon" type="image/png" href="/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_32x32_fill_lanczos_center_3.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://grosjean1.github.io/publication/publi1/" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Academic" />
+<meta property="og:url" content="https://example.com/publication/publi1/" />
+<meta property="og:title" content="Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961 | Academic" />
+<meta property="og:description" content="The context of this paper is the simulation of parameter-dependent partial differential equations (PDEs). When the aim is to solve such PDEs for a large number of parameter values, Reduced Basis Methods (RBM) are often used to reduce computational costs of a classical high fidelity code based on Finite Element Method (FEM), Finite Volume (FVM) or Spectral methods. The efficient implementation of most of these RBM requires to modify this high fidelity code, which cannot be done, for example in an industrial context if the high fidelity code is only accessible as a &#34;black-box&#34; solver. The Non-Intrusive Reduced Basis (NIRB) method has been introduced in the context of finite elements as a good alternative to reduce the implementation costs of these parameter-dependent problems. The method is efficient in other contexts than the FEM one, like with finite volume schemes, which are more often used in an industrial environment. In this case, some adaptations need to be done as the degrees of freedom in FV methods have different meanings. At this time, error estimates have only been studied with FEM solvers. In this paper, we present a generalisation of the NIRB method to Finite Volume schemes and we show that estimates established for FEM solvers also hold in the FVM setting. We first prove our results for the hybrid-Mimetic Finite Difference method (hMFD), which is part the Hybrid Mixed Mimetic methods (HMM) family. Then, we explain how these results apply more generally to other FV schemes. Some of them are specified, such as the Two Point Flux Approximation (TPFA)." /><meta property="og:image" content="https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
+    <meta
+      property="article:published_time"
+      content="2021-07-01T00:00:00&#43;00:00"
+    />
   
-    
-    
   
-  <meta property="twitter:card" content="summary" />
-  
-    <meta property="twitter:site" content="@wowchemy" />
-    <meta property="twitter:creator" content="@wowchemy" />
-  
-  <meta property="og:site_name" content="Elise Grosjean" />
-  <meta property="og:url" content="https://grosjean1.github.io/publication/publi1/" />
-  <meta property="og:title" content="Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961 | Elise Grosjean" />
-  <meta property="og:description" content="The context of this paper is the simulation of parameter-dependent partial differential equations (PDEs). When the aim is to solve such PDEs for a large number of parameter values, Reduced Basis Methods (RBM) are often used to reduce computational costs of a classical high fidelity code based on Finite Element Method (FEM), Finite Volume (FVM) or Spectral methods. The efficient implementation of most of these RBM requires to modify this high fidelity code, which cannot be done, for example in an industrial context if the high fidelity code is only accessible as a &#34;black-box&#34; solver. The Non-Intrusive Reduced Basis (NIRB) method has been introduced in the context of finite elements as a good alternative to reduce the implementation costs of these parameter-dependent problems. The method is efficient in other contexts than the FEM one, like with finite volume schemes, which are more often used in an industrial environment. In this case, some adaptations need to be done as the degrees of freedom in FV methods have different meanings. At this time, error estimates have only been studied with FEM solvers. In this paper, we present a generalisation of the NIRB method to Finite Volume schemes and we show that estimates established for FEM solvers also hold in the FVM setting. We first prove our results for the hybrid-Mimetic Finite Difference method (hMFD), which is part the Hybrid Mixed Mimetic methods (HMM) family. Then, we explain how these results apply more generally to other FV schemes. Some of them are specified, such as the Two Point Flux Approximation (TPFA)." /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
-  
-    
-      <meta
-        property="article:published_time"
-        content="2021-07-01T00:00:00&#43;00:00"
-      />
-    
     <meta property="article:modified_time" content="2021-07-01T00:00:00&#43;00:00">
   
 
-  
+
+
+
 
 
     
@@ -342,7 +361,7 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://grosjean1.github.io/publication/publi1/"
+    "@id": "https://example.com/publication/publi1/"
   },
   "headline": "Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961",
   
@@ -356,10 +375,10 @@
   
   "publisher": {
     "@type": "Organization",
-    "name": "Elise Grosjean",
+    "name": "Academic",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_192x192_fill_lanczos_center_3.png"
+      "url": "https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_192x192_fill_lanczos_center_3.png"
     }
   },
   "description": "The context of this paper is the simulation of parameter-dependent partial differential equations (PDEs). When the aim is to solve such PDEs for a large number of parameter values, Reduced Basis Methods (RBM) are often used to reduce computational costs of a classical high fidelity code based on Finite Element Method (FEM), Finite Volume (FVM) or Spectral methods. The efficient implementation of most of these RBM requires to modify this high fidelity code, which cannot be done, for example in an industrial context if the high fidelity code is only accessible as a \"black-box\" solver. The Non-Intrusive Reduced Basis (NIRB) method has been introduced in the context of finite elements as a good alternative to reduce the implementation costs of these parameter-dependent problems. The method is efficient in other contexts than the FEM one, like with finite volume schemes, which are more often used in an industrial environment. In this case, some adaptations need to be done as the degrees of freedom in FV methods have different meanings. At this time, error estimates have only been studied with FEM solvers. In this paper, we present a generalisation of the NIRB method to Finite Volume schemes and we show that estimates established for FEM solvers also hold in the FVM setting. We first prove our results for the hybrid-Mimetic Finite Difference method (hMFD), which is part the Hybrid Mixed Mimetic methods (HMM) family. Then, we explain how these results apply more generally to other FV schemes. Some of them are specified, such as the Two Point Flux Approximation (TPFA)."
@@ -370,10 +389,21 @@
 
   
 
+
+
+
+  
+  
+  
+
+  
+  
+
   
 
 
-  <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961 | Elise Grosjean</title>
+  
+  <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961 | Academic</title>
 
   
   
@@ -404,7 +434,7 @@
   
   
   
-  <script src="/js/wowchemy-init.min.613040fe4f2c0f007b4dcb64404201cb.js"></script>
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
 
   
 
@@ -448,8 +478,12 @@
 
 
 
-  <div class="page-header">
-    
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
 
 
 
@@ -462,13 +496,13 @@
 
 
 
-<header class="header--fixed">
+<header>
   <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
     <div class="container-xl">
 
       
       <div class="d-none d-lg-inline-flex">
-        <a class="navbar-brand" href="/">Elise Grosjean</a>
+        <a class="navbar-brand" href="/">Academic</a>
       </div>
       
 
@@ -481,7 +515,7 @@
 
       
       <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-        <a class="navbar-brand" href="/">Elise Grosjean</a>
+        <a class="navbar-brand" href="/">Academic</a>
       </div>
       
 
@@ -561,7 +595,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#publications"><span>Recent & Upcoming publications</span></a>
+            <a class="nav-link " href="/#publications"><span>publications</span></a>
           </li>
 
           
@@ -598,7 +632,44 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#accomplishments"><span>Projects</span></a>
+            <a class="nav-link " href="/#Projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#Experience"><span>Experience</span></a>
           </li>
 
           
@@ -672,44 +743,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/#experience"><span>Experience</span></a>
-          </li>
-
-          
-          
-
-          
-
-          
-          
-          
-            
-          
-
-          
-
-          
-          
-          
-          
-
-          
-            
-              
-              
-            
-            
-              
-              
-              
-                
-              
-              
-            
-          
-
-          <li class="nav-item">
-            <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+            <a class="nav-link " href="/#Teaching"><span>Teaching</span></a>
           </li>
 
           
@@ -776,7 +810,7 @@
           
 
           <li class="nav-item">
-            <a class="nav-link " href="/media/cv.pdf"><span>CV</span></a>
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
           </li>
 
           
@@ -887,6 +921,7 @@
 
         
         
+        
         <li class="nav-item">
           <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
         </li>
@@ -933,15 +968,16 @@
     
 
 
-
-
-
-
+  
+    
+    
+  
 
 
 <div class="pub">
 
   
+
 
 
 
@@ -1074,7 +1110,7 @@
           <div class="col-12 col-md-3 pub-row-heading">Type</div>
           <div class="col-12 col-md-9">
             <a href="/publication/#2">
-              Journal article
+              2
             </a>
           </div>
         </div>
@@ -1108,8 +1144,12 @@
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://grosjean1.github.io/publication/publi1/&amp;text=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F&amp;text=Error&#43;estimate&#43;of&#43;the&#43;Non-Intrusive&#43;Reduced&#43;Basis&#43;method&#43;with&#43;finite&#43;volume&#43;schemes%2C&#43;ESAIM%3A&#43;M2AN&#43;55&#43;%282021%29&#43;1941%E2%80%931961" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1121,8 +1161,12 @@
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://grosjean1.github.io/publication/publi1/&amp;t=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F&amp;t=Error&#43;estimate&#43;of&#43;the&#43;Non-Intrusive&#43;Reduced&#43;Basis&#43;method&#43;with&#43;finite&#43;volume&#43;schemes%2C&#43;ESAIM%3A&#43;M2AN&#43;55&#43;%282021%29&#43;1941%E2%80%931961" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1134,8 +1178,14 @@
       
       
       
+      
+      
+      
+      
+        
+      
       <li>
-        <a href="mailto:?subject=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961&amp;body=https://grosjean1.github.io/publication/publi1/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes%2C%20ESAIM%3A%20M2AN%2055%20%282021%29%201941%E2%80%931961&amp;body=https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1147,8 +1197,12 @@
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://grosjean1.github.io/publication/publi1/&amp;title=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F&amp;title=Error&#43;estimate&#43;of&#43;the&#43;Non-Intrusive&#43;Reduced&#43;Basis&#43;method&#43;with&#43;finite&#43;volume&#43;schemes%2C&#43;ESAIM%3A&#43;M2AN&#43;55&#43;%282021%29&#43;1941%E2%80%931961" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1160,8 +1214,12 @@
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="whatsapp://send?text=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961%20https://grosjean1.github.io/publication/publi1/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Error&#43;estimate&#43;of&#43;the&#43;Non-Intrusive&#43;Reduced&#43;Basis&#43;method&#43;with&#43;finite&#43;volume&#43;schemes%2C&#43;ESAIM%3A&#43;M2AN&#43;55&#43;%282021%29&#43;1941%E2%80%931961%20https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1173,8 +1231,12 @@
       
       
       
+      
+      
+      
+      
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://grosjean1.github.io/publication/publi1/&amp;title=Error%20estimate%20of%20the%20Non-Intrusive%20Reduced%20Basis%20method%20with%20finite%20volume%20schemes,%20ESAIM:%20M2AN%2055%20%282021%29%201941%e2%80%931961" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpublication%2Fpubli1%2F&amp;title=Error&#43;estimate&#43;of&#43;the&#43;Non-Intrusive&#43;Reduced&#43;Basis&#43;method&#43;with&#43;finite&#43;volume&#43;schemes%2C&#43;ESAIM%3A&#43;M2AN&#43;55&#43;%282021%29&#43;1941%E2%80%931961" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1208,11 +1270,11 @@
   <div class="media author-card content-widget-hr">
     
       
-      <a href="https://grosjean1.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hue5c65b85e6acd43a0b536d5f250ce9ce_115900_270x270_fill_q75_lanczos_center.jpg" alt="Elise Grosjean"></a>
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hue5c65b85e6acd43a0b536d5f250ce9ce_115900_270x270_fill_q75_lanczos_center.jpg" alt="Elise Grosjean"></a>
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://grosjean1.github.io/">Elise Grosjean</a></h5>
+      <h5 class="card-title"><a href="https://example.com/">Elise Grosjean</a></h5>
       <h6 class="card-subtitle">postdoctoral researcher</h6>
       <p class="card-text">My research interests include numerics, P.D.E analysis, Reduced basis methods.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -1304,13 +1366,17 @@
 
 
   
+  
+  
+  
+  
 
-  
 
-  
 
-  
-  
+
+
+
+
 
 
 
@@ -1333,7 +1399,7 @@
 
   
   <p class="powered-by copyright-license-text">
-    © 2023 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2024 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 
@@ -1353,6 +1419,7 @@
 
 
 
+
   <p class="powered-by">
     
     
@@ -1363,7 +1430,7 @@
       
       
       
-      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
@@ -1375,7 +1442,7 @@
   
 
 
-<script src="/js/vendor-bundle.min.b4708d4364577c16ab7001b265a063a4.js"></script>
+<script src="/js/vendor-bundle.min.391d344a129df56f7ad674c2c2ed04e8.js"></script>
 
 
 
@@ -1391,6 +1458,8 @@
 
 
 
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
 
 
 
@@ -1441,11 +1510,21 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <script id="page-data" type="application/json">{"use_headroom":true}</script>
 
 
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
 
-  <script src="/js/wowchemy-headroom.c251366b4128fd5e6b046d4c97a62a51.js" type="module"></script>
 
 
 
@@ -1458,10 +1537,11 @@
   
 
 
-<script src="/en/js/wowchemy.min.42010733157c11a71adebfe9bae43355.js"></script>
+<script src="/en/js/wowchemy.min.7f5ebaff62ae468cff8bb3dd1337bb9b.js"></script>
 
 
 
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
 
 
 
@@ -1494,7 +1574,9 @@
 </div>
 
 
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
 
 
 

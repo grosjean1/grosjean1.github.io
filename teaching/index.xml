@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Teachings | Elise Grosjean</title>
-    <link>https://grosjean1.github.io/teaching/</link>
-      <atom:link href="https://grosjean1.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <title>Teachings | Academic</title>
+    <link>https://example.com/teaching/</link>
+      <atom:link href="https://example.com/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teachings</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>Teachings</title>
-      <link>https://grosjean1.github.io/teaching/</link>
+      <link>https://example.com/teaching/</link>
     </image>
     
     <item>
       <title>Tutor at Department of Mathematics, TU Kaiserslautern</title>
-      <link>https://grosjean1.github.io/teaching/tuk/</link>
+      <link>https://example.com/teaching/tuk/</link>
       <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/teaching/tuk/</guid>
+      <guid>https://example.com/teaching/tuk/</guid>
       <description>&lt;p&gt;Differential-Algebraic Equations
 &lt;a href=&#34;https://www.mathematik.uni-kl.de/en/das/teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -24,18 +24,18 @@
     
     <item>
       <title>Tutor at l&#39;école nationale de la statistique et de l&#39;administration économique (ENSAE)</title>
-      <link>https://grosjean1.github.io/teaching/ensae/</link>
+      <link>https://example.com/teaching/ensae/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/teaching/ensae/</guid>
+      <guid>https://example.com/teaching/ensae/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.ensae.fr/courses/analyse-numerique-et-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Tutor at Sorbonne université</title>
-      <link>https://grosjean1.github.io/teaching/sorbonne/</link>
+      <link>https://example.com/teaching/sorbonne/</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/teaching/sorbonne/</guid>
+      <guid>https://example.com/teaching/sorbonne/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.ljll.math.upmc.fr/kassab/cours.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;4M026  Approximation des équations aux derivées partielles&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;

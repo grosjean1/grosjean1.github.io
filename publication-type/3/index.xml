@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>3 | Elise Grosjean</title>
-    <link>https://grosjean1.github.io/publication-type/3/</link>
-      <atom:link href="https://grosjean1.github.io/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
+    <title>3 | Academic</title>
+    <link>https://example.com/publication-type/3/</link>
+      <atom:link href="https://example.com/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 09 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://grosjean1.github.io/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
+      <url>https://example.com/media/icon_hudfa5c7b0e055168d44220fc2c1bf586d_98685_512x512_fill_lanczos_center_3.png</url>
       <title>3</title>
-      <link>https://grosjean1.github.io/publication-type/3/</link>
+      <link>https://example.com/publication-type/3/</link>
     </image>
     
     <item>
+      <title>An in-silico approach to meniscus tissue regeneration: Modeling, numerical simulation, and experimental analysis</title>
+      <link>https://example.com/publication/publi6/</link>
+      <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/publi6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (preprint)</title>
-      <link>https://grosjean1.github.io/publication/publi4/</link>
+      <link>https://example.com/publication/publi4/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi4/</guid>
+      <guid>https://example.com/publication/publi4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
-      <link>https://grosjean1.github.io/publication/publi2/</link>
+      <link>https://example.com/publication/publi2/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi2/</guid>
+      <guid>https://example.com/publication/publi2/</guid>
       <description></description>
     </item>
     
