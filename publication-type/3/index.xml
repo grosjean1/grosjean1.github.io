@@ -21,14 +21,6 @@
     </item>
     
     <item>
-      <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (preprint)</title>
-      <link>https://example.com/publication/publi4/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
       <link>https://example.com/publication/publi2/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>

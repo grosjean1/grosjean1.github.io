@@ -21,6 +21,14 @@
     </item>
     
     <item>
+      <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (M2AN)</title>
+      <link>https://example.com/publication/publi4/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.com/publication/publi4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations, SMAI: JCM 9 (2023) 227-256</title>
       <link>https://example.com/publication/publi3/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
@@ -33,14 +41,6 @@
       <link>https://example.com/publication/publi5/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://example.com/publication/publi5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (preprint)</title>
-      <link>https://example.com/publication/publi4/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi4/</guid>
       <description></description>
     </item>
     
