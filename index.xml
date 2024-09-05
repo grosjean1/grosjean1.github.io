@@ -364,7 +364,7 @@ h.dual = 0
 &lt;p&gt;link to tutorial :
 &lt;a href=&#34;ampl_tutorial.pdf&#34;&gt;ampl&lt;/a&gt;
 and in python
-&lt;a href=&#34;notebookAMPLPY/&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://example.com/post/notebook1&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to first TP exercice: &lt;a href=&#34;Gradient_descent-Copy1.ipynb&#34;&gt;Gradient Descent TP&lt;/a&gt;&lt;/p&gt;
