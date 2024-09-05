@@ -279,7 +279,7 @@
 
   
 
-<meta name="description" content="import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0) [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24." />
+<meta name="description" content="#Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy from amplpy import AMPL # import pyAMPL from amplpy import ampl_notebook ampl = ampl_notebook( modules=[&#34;cplex&#34;], # modules to install license_uuid=&#34;default&#34;, # license to use ) # instantiate AMPL object and register magics %%ampl_eval # define decision variables reset; # Declaration of optimization variables var xx; var yy; # Declaration of parameters param aa=-4; param bb=2; %%ampl_eval # Cost function minimize f: xx**2 &#43; aa*(xx&#43;yy) &#43; 2*yy**2; # Constraints subject to g: xx&#43;yy = bb; subject to h: xx &gt;= 0; %%ampl_eval let xx:= 1; let yy:=2; # exhibit the model that has been built ampl." />
 
 
 
@@ -327,17 +327,17 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Academic" />
 <meta property="og:url" content="https://example.com/post/notebook1/" />
-<meta property="og:title" content="Exercice Gradient descent - Notebook | Academic" />
-<meta property="og:description" content="import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0) [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:title" content="Notebook Pyampl tuto | Academic" />
+<meta property="og:description" content="#Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy from amplpy import AMPL # import pyAMPL from amplpy import ampl_notebook ampl = ampl_notebook( modules=[&#34;cplex&#34;], # modules to install license_uuid=&#34;default&#34;, # license to use ) # instantiate AMPL object and register magics %%ampl_eval # define decision variables reset; # Declaration of optimization variables var xx; var yy; # Declaration of parameters param aa=-4; param bb=2; %%ampl_eval # Cost function minimize f: xx**2 &#43; aa*(xx&#43;yy) &#43; 2*yy**2; # Constraints subject to g: xx&#43;yy = bb; subject to h: xx &gt;= 0; %%ampl_eval let xx:= 1; let yy:=2; # exhibit the model that has been built ampl." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
       property="article:published_time"
-      content="2024-09-05T21:21:34&#43;02:00"
+      content="2024-09-05T22:02:43&#43;02:00"
     />
   
   
-    <meta property="article:modified_time" content="2024-09-05T21:21:34&#43;02:00">
+    <meta property="article:modified_time" content="2024-09-05T22:02:43&#43;02:00">
   
 
 
@@ -365,10 +365,10 @@
     "@type": "WebPage",
     "@id": "https://example.com/post/notebook1/"
   },
-  "headline": "Exercice Gradient descent - Notebook",
+  "headline": "Notebook Pyampl tuto",
   
-  "datePublished": "2024-09-05T21:21:34+02:00",
-  "dateModified": "2024-09-05T21:21:34+02:00",
+  "datePublished": "2024-09-05T22:02:43+02:00",
+  "dateModified": "2024-09-05T22:02:43+02:00",
   
   "author": {
     "@type": "Person",
@@ -383,7 +383,7 @@
       "url": "https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0) \u001b[1m[\u001b[0m\u001b[34;49mnotice\u001b[0m\u001b[1;39;49m]\u001b[0m\u001b[39;49m A new release of pip is available: \u001b[0m\u001b[31;49m24."
+  "description": "#Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy from amplpy import AMPL # import pyAMPL from amplpy import ampl_notebook ampl = ampl_notebook( modules=[\u0026#34;cplex\u0026#34;], # modules to install license_uuid=\u0026#34;default\u0026#34;, # license to use ) # instantiate AMPL object and register magics %%ampl_eval # define decision variables reset; # Declaration of optimization variables var xx; var yy; # Declaration of parameters param aa=-4; param bb=2; %%ampl_eval # Cost function minimize f: xx**2 + aa*(xx+yy) + 2*yy**2; # Constraints subject to g: xx+yy = bb; subject to h: xx \u0026gt;= 0; %%ampl_eval let xx:= 1; let yy:=2; # exhibit the model that has been built ampl."
 }
 </script>
 
@@ -405,7 +405,7 @@
 
 
   
-  <title>Exercice Gradient descent - Notebook | Academic</title>
+  <title>Notebook Pyampl tuto | Academic</title>
 
   
   
@@ -989,7 +989,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Exercice Gradient descent - Notebook</h1>
+  <h1>Notebook Pyampl tuto</h1>
 
   
 
@@ -1017,7 +1017,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    1 min read
   </span>
   
 
@@ -1045,51 +1045,19 @@
   <div class="article-container">
 
     <div class="article-style">
-      <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+      <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Install package</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
 </span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
 </span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
 </span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">amplpy</span>
-</span></span></code></pre></div><pre><code>Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0)
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -&gt; [0m[32;49m24.2[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49m/usr/local/Cellar/jupyterlab/4.2.1/libexec/bin/python -m pip install --upgrade pip[0m
-Requirement already satisfied: matplotlib in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (3.9.1)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (1.2.1)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (4.53.1)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (1.4.5)
-Requirement already satisfied: numpy&gt;=1.23 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (2.0.0)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (24.0)
-Requirement already satisfied: pillow&gt;=8 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (10.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (3.1.2)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -&gt; [0m[32;49m24.2[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49m/usr/local/Cellar/jupyterlab/4.2.1/libexec/bin/python -m pip install --upgrade pip[0m
-Requirement already satisfied: amplpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (0.14.0)
-Requirement already satisfied: ampltools&gt;=0.7.5 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from amplpy) (0.7.5)
-Requirement already satisfied: requests in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from ampltools&gt;=0.7.5-&gt;amplpy) (2.32.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from requests-&gt;ampltools&gt;=0.7.5-&gt;amplpy) (3.3.2)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from requests-&gt;ampltools&gt;=0.7.5-&gt;amplpy) (3.7)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from requests-&gt;ampltools&gt;=0.7.5-&gt;amplpy) (2.2.1)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/opt/certifi/lib/python3.12/site-packages (from requests-&gt;ampltools&gt;=0.7.5-&gt;amplpy) (2024.6.2)
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -&gt; [0m[32;49m24.2[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49m/usr/local/Cellar/jupyterlab/4.2.1/libexec/bin/python -m pip install --upgrade pip[0m
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">amplpy</span> <span class="kn">import</span> <span class="n">AMPL</span> <span class="c1"># import AMPL</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">amplpy</span> <span class="kn">import</span> <span class="n">AMPL</span> <span class="c1"># import pyAMPL</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">amplpy</span> <span class="kn">import</span> <span class="n">ampl_notebook</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">ampl</span> <span class="o">=</span> <span class="n">ampl_notebook</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">modules</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;cplex&#34;</span><span class="p">],</span>  <span class="c1"># modules to install</span>
 </span></span><span class="line"><span class="cl">    <span class="n">license_uuid</span><span class="o">=</span><span class="s2">&#34;default&#34;</span><span class="p">,</span>  <span class="c1"># license to use</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>  <span class="c1"># instantiate AMPL object and register magics</span>
-</span></span></code></pre></div><pre><code>AMPL Development Version 20240606 (Darwin-21.6.0, 64-bit)
-Demo license with maintenance expiring 20260131.
-Using license file &quot;/usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages/ampl_module_base/bin/ampl.lic&quot;.
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%%</span><span class="n">ampl_eval</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%%</span><span class="n">ampl_eval</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># define decision variables</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">reset</span><span class="p">;</span>
@@ -1120,39 +1088,11 @@ Using license file &quot;/usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#ampl.option[&#34;solver&#34;] = &#34;highs&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">#ampl.solve()</span>
-</span></span></code></pre></div><pre><code>parameters:   aa   bb
-
-variables:   xx   yy
-
-constraints:   g   h
-
-objective:   f
-minimize f:
-	xx^2 + 2*yy^2 - 4*xx - 4*yy;
-
-subject to g:
-	xx + yy = 2;
-
-subject to h:
-	xx &gt;= 0;
-
-CPLEX 22.1.1.0: optimal solution; objective -5.333333333
-6 separable QP barrier iterations
-No basis.
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ampl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="s2">&#34;xx&#34;</span><span class="p">);</span><span class="c1"># xx,yy;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ampl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="s2">&#34;xx&#34;</span><span class="p">);</span><span class="c1"># xx,yy;</span>
 </span></span><span class="line"><span class="cl"><span class="n">ampl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="s2">&#34;f&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">ampl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="s2">&#34;g.dual&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">ampl</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="s2">&#34;h.dual&#34;</span><span class="p">);</span>
-</span></span></code></pre></div><pre><code>xx = 1.33333
-
-f = -5.33333
-
-g.dual = -1.33333
-
-h.dual = 0
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
     
@@ -1178,7 +1118,7 @@ h.dual = 0
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;text=Exercice&#43;Gradient&#43;descent&#43;-&#43;Notebook" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;text=Notebook&#43;Pyampl&#43;tuto" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1195,7 +1135,7 @@ h.dual = 0
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;t=Exercice&#43;Gradient&#43;descent&#43;-&#43;Notebook" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;t=Notebook&#43;Pyampl&#43;tuto" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1214,7 +1154,7 @@ h.dual = 0
         
       
       <li>
-        <a href="mailto:?subject=Exercice%20Gradient%20descent%20-%20Notebook&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Notebook%20Pyampl%20tuto&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1231,7 +1171,7 @@ h.dual = 0
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;title=Exercice&#43;Gradient&#43;descent&#43;-&#43;Notebook" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;title=Notebook&#43;Pyampl&#43;tuto" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1248,7 +1188,7 @@ h.dual = 0
       
       
       <li>
-        <a href="whatsapp://send?text=Exercice&#43;Gradient&#43;descent&#43;-&#43;Notebook%20https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Notebook&#43;Pyampl&#43;tuto%20https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1265,7 +1205,7 @@ h.dual = 0
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;title=Exercice&#43;Gradient&#43;descent&#43;-&#43;Notebook" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook1%2F&amp;title=Notebook&#43;Pyampl&#43;tuto" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

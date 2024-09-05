@@ -331,7 +331,7 @@
 <meta property="og:description" content="A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
-    <meta property="og:updated_time" content="2024-09-05T21:21:34&#43;02:00" />
+    <meta property="og:updated_time" content="2024-09-05T22:05:54&#43;02:00" />
   
 
 
@@ -976,13 +976,13 @@
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/notebook1/" >Exercice Gradient descent - Notebook</a>
+      <a href="/post/notebook2/" >Gradient descent</a>
     </div>
 
     
-    <a href="/post/notebook1/"  class="summary-link">
+    <a href="/post/notebook2/"  class="summary-link">
       <div class="article-style">
-        import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0) [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.
+        Gradient descent To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \mathbb{R}^2$.
       </div>
     </a>
     
@@ -1015,7 +1015,94 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+      
+    </div>
+
+    
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item view-compact">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/post/notebook1/" >Notebook Pyampl tuto</a>
+    </div>
+
+    
+    <a href="/post/notebook1/"  class="summary-link">
+      <div class="article-style">
+        #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install amplpy from amplpy import AMPL # import pyAMPL from amplpy import ampl_notebook ampl = ampl_notebook( modules=[&#34;cplex&#34;], # modules to install license_uuid=&#34;default&#34;, # license to use ) # instantiate AMPL object and register magics %%ampl_eval # define decision variables reset; # Declaration of optimization variables var xx; var yy; # Declaration of parameters param aa=-4; param bb=2; %%ampl_eval # Cost function minimize f: xx**2 + aa*(xx+yy) + 2*yy**2; # Constraints subject to g: xx+yy = bb; subject to h: xx &gt;= 0; %%ampl_eval let xx:= 1; let yy:=2; # exhibit the model that has been built ampl.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 5, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
   </span>
   
 
