@@ -239,6 +239,20 @@
     </item>
     
     <item>
+      <title>Teacher at ENSTA-Paris</title>
+      <link>https://example.com/teaching/ensta/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/teaching/ensta/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://synapses.ensta-paris.fr/catalogue/2023-2024/ue/791/PGE305-A-optimisation-continue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to ENSTA website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to tutorial :
+&lt;a href=&#34;ampl_tutorial.pdf&#34;&gt;ampl&lt;/a&gt;
+&lt;a href=&#34;AMPLPY_tuto.ipynb&#34;&gt;pyampl&lt;/a&gt;
+link to first TP: &lt;a href=&#34;Gradient_descent-Copy1.ipynb&#34;&gt;Gradient Descent TP&lt;/a&gt;
+link to slides-first part: &lt;a href=&#34;Slide1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tutor at l&#39;école nationale de la statistique et de l&#39;administration économique (ENSAE)</title>
       <link>https://example.com/teaching/ensae/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
