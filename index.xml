@@ -247,10 +247,10 @@
 &lt;p&gt;link to tutorial :
 &lt;a href=&#34;media/ampl_tutorial.pdf&#34;&gt;ampl&lt;/a&gt;
 and
-&lt;a href=&#34;media/AMPLPY_tuto.ipynb&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://example.com/media/AMPLPY_tuto.ipynb&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;link to first TP: &lt;a href=&#34;media/Gradient_descent-Copy1.ipynb&#34;&gt;Gradient Descent TP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;link to slides-first part: &lt;a href=&#34;media/Slide1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;link to TP-first part: &lt;a href=&#34;media/TP1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to slides-first part: &lt;a href=&#34;Slide1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to TP-first part: &lt;a href=&#34;TP1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
