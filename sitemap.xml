@@ -2,15 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/post/notebook3/</loc>
-    <lastmod>2024-09-23T14:56:16+02:00</lastmod>
+    <loc>https://example.com/post/notebook2/</loc>
+    <lastmod>2024-09-05T22:05:54+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/post/</loc>
-    <lastmod>2024-09-23T14:56:16+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://example.com/post/notebook2/</loc>
     <lastmod>2024-09-05T22:05:54+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -160,6 +156,9 @@
   </url><url>
     <loc>https://example.com/teaching/sorbonne/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/post/notebook3/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/categories/</loc>
