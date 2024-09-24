@@ -286,8 +286,8 @@
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://example.com/post/notebook3/" />
-<link rel="canonical" href="https://example.com/post/notebook3/" />
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/notebook4/" />
+<link rel="canonical" href="https://example.com/post/notebook4/" />
 
 
 
@@ -329,11 +329,18 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Academic" />
-<meta property="og:url" content="https://example.com/post/notebook3/" />
-<meta property="og:title" content="Academic" />
+<meta property="og:url" content="https://example.com/post/notebook4/" />
+<meta property="og:title" content="Notebook4 | Academic" />
 <meta property="og:description" content="Gradient descent with projection and augmented lagrangian algorithm To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2&#43;(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) | x= y}$." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
+    <meta
+      property="article:published_time"
+      content="2024-09-24T14:59:19&#43;02:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-09-24T14:59:19&#43;02:00">
   
 
 
@@ -359,12 +366,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/post/notebook3/"
+    "@id": "https://example.com/post/notebook4/"
   },
-  "headline": "",
+  "headline": "Notebook4",
   
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2024-09-24T14:59:19+02:00",
+  "dateModified": "2024-09-24T14:59:19+02:00",
   
   "author": {
     "@type": "Person",
@@ -401,7 +408,7 @@
 
 
   
-  <title>Academic</title>
+  <title>Notebook4 | Academic</title>
 
   
   
@@ -421,7 +428,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="9110f9c5ebe81c74f6a55f3326d453aa" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ed2b200e4dca62049592fadd9d453f8b" >
 
   
   
@@ -985,7 +992,7 @@
   
   
 <div class="article-container pt-3">
-  <h1></h1>
+  <h1>Notebook4</h1>
 
   
 
@@ -1004,7 +1011,7 @@
     
       
     
-    Jan 1, 0001
+    Sep 24, 2024
   </span>
   
 
@@ -1053,25 +1060,25 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># function</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x1</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># gradient</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># constraint</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="c1"># constraint gradient</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">L</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">):</span> 
 </span></span><span class="line"><span class="cl">    <span class="c1"># lagrangian</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Lc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> 
 </span></span><span class="line"><span class="cl">    <span class="c1"># augmented lagrangian</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span><span class="n">c</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">),</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> 
 </span></span><span class="line"><span class="cl">    <span class="c1"># augmented lagrangian gradient</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">df</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span> <span class="n">c</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">),</span><span class="n">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span> <span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span> <span class="c1">#(x1-x2) (1,-1)</span>
 </span></span></code></pre></div><p>We need to define a norm to now how far from the global solution we are.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">norm</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -1124,21 +1131,21 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl">    <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
 </span></span><span class="line"><span class="cl">    <span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="o">=</span><span class="n">xy0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#starting points</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#gradient function of Lc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1">#gradient function</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cpt_grad</span><span class="o">=</span><span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">grad_f</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">eps</span> <span class="ow">and</span> <span class="n">cpt_grad</span><span class="o">&lt;</span><span class="mi">500</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#direction</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad_f</span> <span class="c1">#direction</span>
 </span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>  <span class="c1">#armijo</span>
 </span></span><span class="line"><span class="cl">        <span class="n">xy_old</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">])</span>        
 </span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">wolfe_rule</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1"># find best alpha</span>
-</span></span><span class="line"><span class="cl">        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y0</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
 </span></span><span class="line"><span class="cl">        <span class="n">evolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">evolution</span><span class="p">,</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">cpt_grad</span><span class="o">+=</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">evolution</span>
-</span></span></code></pre></div><h3 id="3-complete-the-code-of-the-augmented-lagrangian">3. Complete the code of the augmented lagrangian:</h3>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h3 id="3-complete-the-code-of-the-augmented-lagrangian">3. Complete the code of the augmented lagrangian:</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#initialization for Armijo</span>
 </span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## start GD algorithm</span>
@@ -1147,35 +1154,35 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl"><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span>
 </span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">=</span><span class="mf">1.</span> <span class="c1"># penalty parameter</span>
 </span></span><span class="line"><span class="cl"><span class="n">mu</span><span class="o">=</span><span class="mf">1.7</span> <span class="c1"># dual variable</span>
-</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=...</span> <span class="c1"># not a golden function, but the constraints are very precious</span>
-</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># gradient of the augmented lagrangian</span>
+</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1"># not a golden function, but the constraints are very precious</span>
+</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1"># gradient of the augmented lagrangian</span>
 </span></span><span class="line"><span class="cl"><span class="n">cpt</span><span class="o">=</span><span class="mi">0</span> <span class="c1"># to avoid infinite while loop</span>
 </span></span><span class="line"><span class="cl"><span class="n">xy0</span><span class="o">=</span><span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">)</span><span class="o">&gt;</span><span class="n">eps</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">&gt;</span><span class="n">eps</span> <span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=</span><span class="n">GradientDescent</span><span class="p">(</span><span class="n">Lc</span><span class="p">,</span><span class="n">dxLc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="n">evolution_X</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">evolution_Y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># last points</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x1:&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="s2">&#34; x2:&#34;</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)))</span><span class="o">&lt;</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">gold</span><span class="p">):</span> <span class="c1"># if ||g|| is small </span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;||g|| smaller&#34;,np.abs(g(x1,x2)))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">=...</span> <span class="c1">#increase mu</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#increase mu</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;new mu: &#34;</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">=...</span> <span class="c1"># increase c</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="o">*</span><span class="mi">2</span> <span class="c1"># increase c</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;new c: &#34;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cpt</span><span class="o">+=</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=...</span> <span class="c1">#updates</span>
-</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#updates</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;norm of gradx_f: &#34;</span><span class="p">,</span><span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">cpt</span><span class="o">==</span><span class="mi">20</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">break</span>
 </span></span><span class="line"><span class="cl">        
 </span></span></code></pre></div><p>We can display the solution onto the contour of $f$ or onto the contour of $L_c$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
@@ -1217,7 +1224,7 @@ We start by manually compute its gradient and we will display its evolution duri
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./Gradient_descent-augmentedLagrangian_14_1.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./Notebook4_18_1.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <h3 id="4-we-add-new-constraints-xy-must-stay-in-k-20times--20-complete-the-code-that-finds-the-projection-of-xy-on-a-cuboid-k-then-change-the-gradient-descent-algorithm-to-take-into-account-this-projection-step">4. We add new constraints: $(x,y)$ must stay in $K=[-2.,0]\times [-2,0]$. Complete the code that finds the projection of $(x,y)$ on a cuboid $K$. Then, change the gradient descent algorithm to take into account this projection step</h3>
@@ -1227,7 +1234,7 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl">    <span class="n">u0</span><span class="o">=...</span>
 </span></span><span class="line"><span class="cl">    <span class="n">l1</span><span class="o">=...</span>
 </span></span><span class="line"><span class="cl">    <span class="n">u1</span><span class="o">=...</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span><span class="p">,</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">    
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># NEW GRADIENT DESCENT ALGORITHM:</span>
 </span></span><span class="line"><span class="cl">
@@ -1238,19 +1245,19 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl">    <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
 </span></span><span class="line"><span class="cl">    <span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="o">=</span><span class="n">xy0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="c1">#1,2</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cpt_grad</span><span class="o">=</span><span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">grad_f</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">eps</span> <span class="ow">and</span> <span class="n">cpt_grad</span><span class="o">&lt;</span><span class="mi">500</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad_f</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#armijo</span>
 </span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
 </span></span><span class="line"><span class="cl">        <span class="n">xy_old</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">])</span>        
 </span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">wolfe_rule</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">        <span class="n">evolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">evolution</span><span class="p">,</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="n">cpt_grad</span><span class="o">+=</span><span class="mi">1</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">evolution</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## AUGMENTED LAGRANGIAN WITH PROJECTION</span>
@@ -1261,14 +1268,14 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl"><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="c1">#0.5</span>
 </span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">=</span><span class="mf">1.</span>
 </span></span><span class="line"><span class="cl"><span class="n">mu</span><span class="o">=</span><span class="mf">1.7</span>
-</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=...</span>
-</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">cpt</span><span class="o">=</span><span class="mi">0</span>
 </span></span><span class="line"><span class="cl"><span class="n">xy0</span><span class="o">=</span><span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">K</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl"><span class="n">K</span><span class="o">=</span><span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
 </span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">)</span><span class="o">&gt;</span><span class="n">eps</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">&gt;</span><span class="n">eps</span> <span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=</span><span class="n">GradientDescent</span><span class="p">(</span><span class="n">Lc</span><span class="p">,</span><span class="n">dxLc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="n">x1</span><span class="o">=</span><span class="n">evolution_X</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -1276,25 +1283,25 @@ We start by manually compute its gradient and we will display its evolution duri
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x1:&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="s2">&#34; x2:&#34;</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)))</span><span class="o">&lt;</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">gold</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;||g|| smaller&#34;,np.abs(g(x1,x2)))</span>
-</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">+=</span><span class="n">c</span><span class="o">*</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;mu&#34;, mu)</span>
 </span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">*=</span><span class="mi">2</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;c&#34;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">cpt</span><span class="o">+=</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=...</span>
-</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;norm: &#34;</span><span class="p">,</span><span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;mu: &#34;</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">cpt</span><span class="o">==</span><span class="mi">20</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="k">break</span>
-</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    
 </span></span></code></pre></div><h3 id="5-you-should-find-mu1-and-x_1x_200">5. You should find $\mu=1$, and $(x_1,x_2)=0,0$.</h3>
 <p>The constraints $-x_1 \leq 2$ and $-x_2 \leq 2$ are inactive, and thus the associated dual variables are equal to $0$.
 With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associated to $x_1 \leq 0$ and $x_2 \leq 0$.</p>
-<p>Draw the new augmented lagrangian with these constraints added:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<p>Defined the new augmented lagrangian with these constraints added:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
@@ -1339,7 +1346,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./Gradient_descent-augmentedLagrangian_20_1.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./Notebook4_25_1.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
@@ -1368,7 +1375,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F&amp;text=" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F&amp;text=Notebook4" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1385,7 +1392,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F&amp;t=" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F&amp;t=Notebook4" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1404,7 +1411,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
         
       
       <li>
-        <a href="mailto:?subject=&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Notebook4&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1421,7 +1428,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F&amp;title=" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F&amp;title=Notebook4" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1438,7 +1445,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
       
       
       <li>
-        <a href="whatsapp://send?text=%20https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Notebook4%20https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1455,7 +1462,7 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook3%2F&amp;title=" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4%2F&amp;title=Notebook4" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
