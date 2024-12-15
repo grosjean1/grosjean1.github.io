@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://example.com/post/my-post/</loc>
+    <lastmod>2024-12-13T10:19:20+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2024-12-13T10:19:20+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/talk/idefix-days-2024/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -15,10 +23,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/post/exo7/</loc>
-    <lastmod>2024-10-15T08:59:10+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://example.com/post/</loc>
     <lastmod>2024-10-15T08:59:10+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
