@@ -23,6 +23,23 @@
     </item>
     
     <item>
+      <title>APM_5EN06_TA at ENSTA-Paris</title>
+      <link>https://example.com/teaching/ensta_apm_5en06_ta/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>https://example.com/teaching/ensta_apm_5en06_ta/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;link to slides:
+&lt;a href=&#34;slides1.pdf&#34;&gt;slides1&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link to first TP: &lt;a href=&#34;https://example.com/post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>APM_5EN5A_TA at ENSTA-Paris</title>
       <link>https://example.com/teaching/ensta/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>

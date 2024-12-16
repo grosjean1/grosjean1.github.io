@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/post/my-post/</loc>
-    <lastmod>2024-12-13T10:19:20+01:00</lastmod>
+    <loc>https://example.com/post/</loc>
+    <lastmod>2024-12-16T22:38:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/post/</loc>
+    <loc>https://example.com/post/notebookdynprog/</loc>
+    <lastmod>2024-12-16T22:38:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/post/my-post/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -164,6 +168,10 @@
   </url><url>
     <loc>https://example.com/talk/model-order-reduction-summer-school-morss2020/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://example.com/teaching/ensta_apm_5en06_ta/</loc>
+    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/teaching/ensta/</loc>
