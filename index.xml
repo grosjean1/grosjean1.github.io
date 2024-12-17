@@ -1382,7 +1382,8 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;link to slides:
-&lt;a href=&#34;slides1.pdf&#34;&gt;slides1&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;slides1.pdf&#34;&gt;slides 1&lt;/a&gt;
+&lt;a href=&#34;slides2.pdf&#34;&gt;slides 2&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to first TP: &lt;a href=&#34;https://example.com/post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/p&gt;
