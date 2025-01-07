@@ -2004,19 +2004,15 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://example.com/teaching/ensta_apm_5en06_ta/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;link to slides:
-&lt;a href=&#34;slides1.pdf&#34;&gt;slides 1&lt;/a&gt;
-&lt;a href=&#34;slides3.pdf&#34;&gt;slides 2&lt;/a&gt;
-&lt;a href=&#34;scenarios.mat&#34;&gt;for TP2&lt;/a&gt;
-&lt;a href=&#34;slides2.pdf&#34;&gt;Other test&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link to first TP: &lt;a href=&#34;https://example.com/post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link to second TP: &lt;a href=&#34;https://example.com/post/tp2ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;link to slides:
+&lt;a href=&#34;slides1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;slides3.pdf&#34;&gt;slides 2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;scenarios.mat&#34;&gt;scenarios.mat for TP2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;slides2.pdf&#34;&gt;Other test&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;link to first TP: &lt;a href=&#34;https://example.com/post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to second TP: &lt;a href=&#34;https://example.com/post/tp2ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
