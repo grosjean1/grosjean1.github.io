@@ -286,8 +286,8 @@
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://example.com/post/tp2ent306/" />
-<link rel="canonical" href="https://example.com/post/tp2ent306/" />
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/tp3ent306/" />
+<link rel="canonical" href="https://example.com/post/tp3ent306/" />
 
 
 
@@ -329,8 +329,8 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Academic" />
-<meta property="og:url" content="https://example.com/post/tp2ent306/" />
-<meta property="og:title" content="Tp2 | Academic" />
+<meta property="og:url" content="https://example.com/post/tp3ent306/" />
+<meta property="og:title" content="TP 3 | Academic" />
 <meta property="og:description" content="#Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib # import packages import numpy as np import scipy from scipy import optimize from scipy.optimize import minimize Deterministic model Time scale: the decisions are taken every hour during the day." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -366,9 +366,9 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/post/tp2ent306/"
+    "@id": "https://example.com/post/tp3ent306/"
   },
-  "headline": "Tp2",
+  "headline": "TP 3",
   
   "datePublished": "2024-12-13T10:19:20+01:00",
   "dateModified": "2024-12-13T10:19:20+01:00",
@@ -408,7 +408,7 @@
 
 
   
-  <title>Tp2 | Academic</title>
+  <title>TP 3 | Academic</title>
 
   
   
@@ -428,7 +428,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="7fee120cbc470ab52c06a8b4521110f1" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="e614139946ffcc9d2c4f2d3e7984a507" >
 
   
   
@@ -992,7 +992,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Tp2</h1>
+  <h1>TP 3</h1>
 
   
 
@@ -1020,7 +1020,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    11 min read
+    12 min read
   </span>
   
 
@@ -1421,7 +1421,7 @@ $$
 <p>2/ Optimization.</p>
 <p>We solve:
 $$
-inf_{((x(t),&hellip;,x(T+1)),(a(t),&hellip;,a(T)),(v(t),&hellip;,v(T))} \sum_{s=t}^{T} \Big( P_a(s) a(s) - P_v(s) v(s) \Big).
+\underset{\underset{\huge v(t),&hellip;,v(T)}{\underset{\huge a(t),&hellip;,a(T)}{x(t),&hellip;,x(T+1)}}}{\textrm{inf}}\ \sum_{s=t}^{T} \Big( P_a(s) a(s) - P_v(s) v(s) \Big).
 $$
 s.t</p>
 <ul>
@@ -1518,13 +1518,14 @@ s.t</p>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">J</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>5.0205275654553985
 </code></pre>
-<p>In fact, the previous implementation respects the constraints $x(s+1)=x(s)+a(s)−v(s)−D_p(s)$ with the autoregressive demand $D_p$ but not with the true demand $D(s)$, such that we can&rsquo;t compare this cost (5.0205275654553985) with the optimal cost from exercice 1.</p>
+<p>In fact, the previous implementation respects the constraints $x(s+1)=x(s)+a(s)−v(s)−D_p(s)$ with the autoregressive demand $D_p$ but not with the true demand $D(s)$ for each $s$, such that we can&rsquo;t compare this cost (5.0205275654553985) with the optimal cost from exercice 1.</p>
 <p>Since at every time $t$ the demand $D(t)$ is revealed, we can use it to enhance our model (such that the constraint with the true demand holds):</p>
-<p>In that case, we only save the solution $x(s+1)$, $a(s)$, $v(s)$ for one time $s$ and then update the cost with these saved solutions (and proceed with $s+1$ and so on&hellip;) for $s$ going from an initial time $t$ with an initial energy stock y.</p>
-<h4 id="correct-the-previous-version-in-order-that-the-constraint-with-the-true-demand-holds">Correct the previous version in order that the constraint with the true demand holds</h4>
+<p>In that case, we only save the solution $x(s+1)$, $a(s)$, $v(s)$ for one time $s$ and then update the cost with these saved solutions (and proceed with $s+1$ and so on&hellip;) for $s$ going from an initial time $t$ with an initial energy stock y to $T$.</p>
+<h4 id="correct-the-previous-version-in-order-that-the-constraint-with-the-true-demand-holds-and-compare-your-result-with-an-autoregressive-process-of-order-1-and-with-an-autoregressive-process-of-order-0">Correct the previous version in order that the constraint with the true demand holds and compare your result with an autoregressive process of order 1 and with an autoregressive process of order 0.</h4>
 <p>To simplify the implementation, you can take $t=0$ and $y=0$.</p>
-<p>#Expected result: 13.22638501</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">predictive_online</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">gamma</span><span class="p">,</span><span class="n">beta</span><span class="p">):</span> <span class="c1">#with t0=0 and y=0</span>
+<p>#Expected result order 1: 13.22638501</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># of order 1</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">predictive_online</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">gamma</span><span class="p">,</span><span class="n">beta</span><span class="p">):</span> <span class="c1">#with t0=0 and y=0</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">,</span><span class="n">P_a</span><span class="p">,</span><span class="n">P_v</span><span class="p">,</span><span class="n">xmax</span>
 </span></span><span class="line"><span class="cl">
@@ -1608,40 +1609,113 @@ s.t</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="n">GlobalJ</span><span class="o">=</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">GlobalJ</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">predictive_eval</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">beta1</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">gamma</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span><span class="n">E</span><span class="o">=</span><span class="n">auto_reg_1</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#gamma,beta1,E=auto_reg_l(10,1) #auto_reg_1(10)</span>
+</span></span><span class="line"><span class="cl"><span class="n">predictive_eval</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span><span class="n">beta1</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>array([13.22638501])
 </code></pre>
-<h1 id="exercise-12">Exercise 12;</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># autoregressive process of order 0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">predictive_online_0</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">gamma</span><span class="p">):</span> <span class="c1">#with t0=0 and y=0</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x_saved</span><span class="p">,</span><span class="n">a_saved</span><span class="p">,</span><span class="n">v_saved</span><span class="p">,</span><span class="n">J</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Expected result:10.75253499</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">predictive_eval</span><span class="p">(</span><span class="n">gamma</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">DS</span><span class="p">,</span><span class="n">NS</span><span class="p">,</span><span class="n">T0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">GlobalJ</span><span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NS</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">J</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GlobalJ</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">GlobalJ</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">GlobalJ</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gamma</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span><span class="n">E</span><span class="o">=</span><span class="n">auto_reg_l</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#gamma,_,E=auto_reg_l(10,0) of order 0 </span>
+</span></span><span class="line"><span class="cl"><span class="n">predictive_eval</span><span class="p">(</span><span class="n">gamma</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="exercise-12">Exercise 12;</h1>
 <p>Implement the control strategy induced by the dynamic programming principle with the auto-regressive model of order zero.</p>
 <p>% Answer: 10.27</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">DP_solve_0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">d_t</span><span class="p">):</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">x_max</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">P_a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">P_v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#interpolation used in backward step (same as in TP1, exercice 2)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">interpolate_2_0</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">val</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">objective</span><span class="p">(</span><span class="n">alpha</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">z</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">val</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># initial guess</span>
+</span></span><span class="line"><span class="cl">    <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl">    <span class="n">alpha0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># show initial objective</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#39;Initial SSE Objective: &#39; + str(objective(alpha0)))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># optimize </span>
+</span></span><span class="line"><span class="cl">    <span class="n">solution</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#39;Output SSE Objective: &#39; + str((solution.fun)))</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#39;Optimal minimizers: &#39; + str((solution.x)))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">solution</span><span class="o">.</span><span class="n">x</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="c1"># Solve the dynamical programming step with the coefficients alpha to approach V(t+1,z)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">DP_solve_0</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">d_t</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">x_max</span><span class="p">,</span><span class="n">P_a</span><span class="p">,</span><span class="n">P_v</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cost</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># X[0]=z X[1]=a, X[2]= v </span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># inf P_a*a -Pv*v + V(t+1,z): with (V(t+1, z) as a fonction of different values of z, approach by the coeffs alpha</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># x,a,v&gt;=0, x&lt;=xmax -&gt; bounds</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># z -a +v = y -d[t] -&gt; contraints</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="n">cons</span> <span class="o">=</span> <span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;eq&#39;</span><span class="p">,</span> <span class="s1">&#39;fun&#39;</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">...</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="n">bnds</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="o">...</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#34;objective solution: &#34;,res.fun)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#34;min solution: &#34;,res.x)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">z</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">z</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">res</span><span class="o">.</span><span class="n">fun</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">DP_backward_0</span><span class="p">(</span><span class="n">N_E</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">D</span> <span class="o">=</span> <span class="n">sample_training_set</span><span class="p">(</span><span class="n">N_E</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">J</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">x_max</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">alpha</span><span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">,</span><span class="n">J</span><span class="p">,</span><span class="n">x_max</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D</span> <span class="o">=</span> <span class="o">...</span> <span class="c1"># for order 0: sampling of size (T,N_E)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">alpha</span><span class="o">=</span> <span class="o">...</span> <span class="c1">#coefficients of interpolation</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y_grid</span><span class="o">=</span> <span class="o">...</span><span class="c1">#level of stock energy in [0,x_max]</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">J</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y_grid</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">T</span><span class="p">)):</span> <span class="c1"># Backward in time </span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">        <span class="n">Val_update</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">J</span><span class="p">):</span> <span class="c1"># for all value y_j, we evaluate V(t,y_j) (first with alpha=0 )</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N_E</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">val</span><span class="o">=</span> <span class="o">...</span>   
+</span></span><span class="line"><span class="cl">                <span class="n">Val_update</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+=...</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Val_update</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">/=...</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="p">[:,</span><span class="n">t</span><span class="p">]</span><span class="o">=</span> <span class="o">...</span> <span class="c1"># interpolation to get alpha_t (alpha = interpolation with (y_j)_j of (V(t,y_j))_j )</span>
+</span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">alpha</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">DP_forward_0_online</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">P_a</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">P_v</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">,</span><span class="n">P_a</span><span class="p">,</span><span class="n">P_v</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">T</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">T</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">v</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">T</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">z</span><span class="p">,</span><span class="n">a0</span><span class="p">,</span><span class="n">v0</span><span class="p">,</span><span class="n">_</span><span class="o">=...</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">x</span><span class="p">[</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">a</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">v</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">val</span><span class="o">=...</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">val</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
@@ -1649,21 +1723,21 @@ s.t</p>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">DP_forward_0_eval</span><span class="p">(</span><span class="n">N_E</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">N_S</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">D_S</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T_0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">T</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">N_S</span><span class="p">,</span><span class="n">D_S</span><span class="p">,</span><span class="n">T_0</span><span class="p">,</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">cost</span><span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NS</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">_</span><span class="p">,</span><span class="n">J</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cost</span> <span class="o">+=</span>  <span class="n">J</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">alpha</span><span class="o">=</span> <span class="n">DP_backward_0</span><span class="p">(</span><span class="n">N_E</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cost</span><span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cost</span> <span class="o">/=</span> <span class="n">NS</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">cost</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">J</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">N_E</span><span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">J</span><span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">N_E</span><span class="o">=</span> <span class="mi">10</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span> <span class="o">...</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">cost</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span> <span class="c1">#</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
@@ -1690,7 +1764,7 @@ s.t</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F&amp;text=Tp2" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F&amp;text=TP&#43;3" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1707,7 +1781,7 @@ s.t</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F&amp;t=Tp2" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F&amp;t=TP&#43;3" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1726,7 +1800,7 @@ s.t</p>
         
       
       <li>
-        <a href="mailto:?subject=Tp2&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=TP%203&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1743,7 +1817,7 @@ s.t</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F&amp;title=Tp2" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F&amp;title=TP&#43;3" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1760,7 +1834,7 @@ s.t</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Tp2%20https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=TP&#43;3%20https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1777,7 +1851,7 @@ s.t</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp2ent306%2F&amp;title=Tp2" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp3ent306%2F&amp;title=TP&#43;3" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
