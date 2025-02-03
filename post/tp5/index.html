@@ -282,12 +282,12 @@
 
   
 
-<meta name="description" content="TP 4 Logistic regression import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {&#39;tex.usetex&#39;: True} We are given a family of $n$ points $x_i$ in $\mathbb{R}^2$, as well as $n$ \textit{labels} associated $(y_i)_{1 \leq i \leq n}$ in ${0,1}$." />
+<meta name="description" content="TP 4 Logistic regression import sys !{sys.executable} -m pip install numdifftools !{sys.executable} -m pip install scikit-learn import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {&#39;tex." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://example.com/post/tp4ent306/" />
-<link rel="canonical" href="https://example.com/post/tp4ent306/" />
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/tp5/" />
+<link rel="canonical" href="https://example.com/post/tp5/" />
 
 
 
@@ -329,9 +329,9 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Academic" />
-<meta property="og:url" content="https://example.com/post/tp4ent306/" />
-<meta property="og:title" content="Tp4 | Academic" />
-<meta property="og:description" content="TP 4 Logistic regression import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {&#39;tex.usetex&#39;: True} We are given a family of $n$ points $x_i$ in $\mathbb{R}^2$, as well as $n$ \textit{labels} associated $(y_i)_{1 \leq i \leq n}$ in ${0,1}$." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://example.com/post/tp5/" />
+<meta property="og:title" content="TP 2 (End) | Academic" />
+<meta property="og:description" content="TP 4 Logistic regression import sys !{sys.executable} -m pip install numdifftools !{sys.executable} -m pip install scikit-learn import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {&#39;tex." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -366,9 +366,9 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/post/tp4ent306/"
+    "@id": "https://example.com/post/tp5/"
   },
-  "headline": "Tp4",
+  "headline": "TP 2 (End)",
   
   "datePublished": "2024-12-13T10:19:20+01:00",
   "dateModified": "2024-12-13T10:19:20+01:00",
@@ -386,7 +386,7 @@
       "url": "https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "TP 4 Logistic regression import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {\u0026#39;tex.usetex\u0026#39;: True} We are given a family of $n$ points $x_i$ in $\\mathbb{R}^2$, as well as $n$ \\textit{labels} associated $(y_i)_{1 \\leq i \\leq n}$ in ${0,1}$."
+  "description": "TP 4 Logistic regression import sys !{sys.executable} -m pip install numdifftools !{sys.executable} -m pip install scikit-learn import numpy as np import matplotlib.pyplot as plt from time import time import random #params = {\u0026#39;tex."
 }
 </script>
 
@@ -408,7 +408,7 @@
 
 
   
-  <title>Tp4 | Academic</title>
+  <title>TP 2 (End) | Academic</title>
 
   
   
@@ -428,7 +428,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="05e6e36499d32c8ab8e3122ec96d39cc" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="49c6b774aa043a1ebdf065d4c15abcc4" >
 
   
   
@@ -992,7 +992,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Tp4</h1>
+  <h1>TP 2 (End)</h1>
 
   
 
@@ -1020,7 +1020,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    13 min read
   </span>
   
 
@@ -1049,7 +1049,11 @@
 
     <div class="article-style">
       <center><h1> TP 4 </h1><h2>Logistic regression</h2></center>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numdifftools</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
@@ -1152,7 +1156,7 @@ where $\lambda$ is a regularization parameter.</p>
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_7_0.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_7_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <h2 id="exercice-1">Exercice 1:</h2>
@@ -1186,7 +1190,7 @@ where $\lambda$ is a regularization parameter.</p>
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_12_0.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_12_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">phi1_deriv</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
@@ -1381,7 +1385,7 @@ Wall time: 193 ms
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_20_1.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_20_1.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <h3 id="separation-line">separation line</h3>
@@ -1429,7 +1433,7 @@ Wall time: 193 ms
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_23_0.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_23_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <h2 id="exercice-3">Exercice 3</h2>
@@ -1540,7 +1544,7 @@ Wall time: 41 ms
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_30_1.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_30_1.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
 <h2 id="exercice-4-stochastic-version">Exercice 4: Stochastic version</h2>
@@ -1602,10 +1606,229 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./tp4_35_1.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./TP5_35_1.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+<h2 id="exercice-5-ipm">Exercice 5: IPM</h2>
+<p>In the previous exercice, we minimize the log-loss function with a regularization term:</p>
+<p>\begin{equation*}
+f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log (1-\sigma(\langle w,x_i \rangle)) + \lambda \frac12 \lVert w\rVert^2,
+\end{equation*}
+where $\lambda$ is a regularization parameter.</p>
+<p>The role of $\lambda \frac12 \lVert w\rVert^2$ is to avoid values with $w$ too high:
+Indead, if $w$ is high, then $\sigma(w^T \ x)$ becomes to close to $0$ and $1$, which entails numerical instability problems (NaN).</p>
+<p>Instead of the $L2$ regularization, we can use the Interior Point Method (IPM), often used in energy application and find the minimum of:
+\begin{equation*}
+f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log (1-\sigma(\langle w,x_i \rangle)) + C \sum_{j=1}^dlog(1+|w_j|^2),
+\end{equation*}
+where $C$ is the penalization parameter.</p>
+<p>Compare the different level-set functions. What do you observe?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">C</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#=lda/2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f_IPM</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f_L2</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Level circles of f</span>
+</span></span><span class="line"><span class="cl"><span class="n">dom</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">level_circle</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">dom</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Level circles of f_IPM</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">level_circle</span><span class="p">(</span><span class="n">f_IPM</span><span class="p">,</span><span class="n">dom</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Level circles of f_IPM</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">level_circle</span><span class="p">(</span><span class="n">f_L2</span><span class="p">,</span><span class="n">dom</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="51">5.1</h4>
+<p>Code the fixed step gradient descent with the IPM function and observe how $C$ influences the minimum:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Gradient descent</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">gradf_IPM</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Check that your gradient implementation is correct</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-8</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This quantity must be of order 1e-8 : &#34;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">gradf_IPM</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="n">f_IPM</span><span class="p">(</span><span class="n">w</span> <span class="o">+</span> <span class="n">epsilon</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="o">-</span> <span class="n">f_IPM</span><span class="p">(</span><span class="n">w</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">epsilon</span><span class="p">),</span> <span class="p">(</span><span class="n">f_IPM</span><span class="p">(</span><span class="n">w</span> <span class="o">+</span> <span class="n">epsilon</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span> <span class="o">-</span> <span class="n">f_IPM</span><span class="p">(</span><span class="n">w</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">epsilon</span><span class="p">)])))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl"><span class="n">eps</span><span class="o">=</span><span class="mf">1e-5</span>
+</span></span><span class="line"><span class="cl"><span class="n">xlist_approx</span><span class="o">=</span><span class="n">gradient_descent_fixedstep</span><span class="p">(</span><span class="n">gradf_IPM</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plot_descent</span><span class="p">(</span><span class="n">f_IPM</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot_descent</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">lda</span><span class="o">=</span><span class="n">C</span><span class="o">*</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">xlist_approx</span><span class="o">=</span><span class="n">gradient_descent_fixedstep</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot_descent</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span></code></pre></div><h3 id="exercice-6-neural-networks">Exercice 6: Neural networks</h3>
+<p>Thanks to sklear module, compare your results of logistic regression with the function MLPClassifier with no hidden layers and with the LogisticRegression function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">log_loss</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Logictic regression (no hidden layer)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Log-loss (no hidden layer) : </span><span class="si">{</span><span class="n">log_loss_no_hidden</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Compare to our model:</span>
+</span></span><span class="line"><span class="cl"><span class="n">x0</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl"><span class="n">eps</span><span class="o">=</span><span class="mf">1e-5</span>
+</span></span><span class="line"><span class="cl"><span class="n">xlist_approx</span><span class="o">=</span><span class="n">gradient_descent_fixedstep</span><span class="p">(</span><span class="n">gradf</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Log-loss (our model) : </span><span class="si">{</span><span class="n">f</span><span class="p">(</span><span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Compare the weights</span>
+</span></span></code></pre></div><h4 id="61">6.1</h4>
+<p>Try now MLPClassifier (Multi-layer Perceptron classifier) with several hidden layers, and compute the number of parameters for 1, 10 and 20 layers (and then in the general case).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">############</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Model one hidden layer, 8 neurones</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Log-loss (1 hidden layer) : </span><span class="si">{</span><span class="n">log_loss_one_hidden</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">w_opt</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">b_opt</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Model 10 hidden layers,8 neurones</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Log-loss (10 hidden layers) : </span><span class="si">{</span><span class="n">log_loss_ten_hidden</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Model 20 hidden layers, 8 neurones</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Log-loss (20 hidden layers) : </span><span class="si">{</span><span class="n">log_loss_twenty_hidden</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="visualization-2">Visualization</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## ONE LAYER</span>
+</span></span><span class="line"><span class="cl"><span class="n">dom_points</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">grid_size</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">xi_list</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">([</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]))</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">mlp_one_hidden</span><span class="o">.</span><span class="n">coefs_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span><span class="n">mlp_one_hidden</span><span class="o">.</span><span class="n">intercepts_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span><span class="n">mlp_one_hidden</span><span class="o">.</span><span class="n">coefs_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span><span class="n">mlp_one_hidden</span><span class="o">.</span><span class="n">intercepts_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()))</span> 
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">grid_size</span><span class="p">,</span> <span class="n">grid_size</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#print(f(w_opt))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Graphique des lignes de niveaux</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">CS</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&#34;viridis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">CS</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">yi_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;green&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">CS</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Data separation, green points y=0, red points y=1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&#34;equal&#34;</span><span class="p">,</span> <span class="n">adjustable</span> <span class="o">=</span> <span class="s2">&#34;box&#34;</span><span class="p">)</span> <span class="c1"># pour que les axes aient la même échelle</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">##TWENTY LAYERS</span>
+</span></span><span class="line"><span class="cl"><span class="n">dom_points</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">grid_size</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">xi_list</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">([</span><span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]]))</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">grid_size</span><span class="p">,</span> <span class="n">grid_size</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#print(f(w_opt))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Graphique des lignes de niveaux</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">CS</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&#34;viridis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">CS</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">yi_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;green&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">CS</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Data separation, green points y=0, red points y=1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&#34;equal&#34;</span><span class="p">,</span> <span class="n">adjustable</span> <span class="o">=</span> <span class="s2">&#34;box&#34;</span><span class="p">)</span> <span class="c1"># pour que les axes aient la même échelle</span>
+</span></span></code></pre></div><h4 id="62">6.2</h4>
+<p>what happens if we increase the number of layers too much?</p>
+<h3 id="exercice-7">Exercice 7:</h3>
+<p>Code the function for one hidden layer and two neurons</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## OPTIONAL : Use a gradient descent algorithm with np.Gradient(f)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="p">,</span><span class="n">gamma</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="mf">0.001</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">gradient_descent_fixedstep</span><span class="p">(</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">xlist_approx</span> <span class="o">=</span> <span class="n">gradient_descent_fixedstep</span><span class="p">(</span> <span class="n">x0</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Separate data</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Indication: take the coefficients obtained from the MLP with one hidden layer </span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">opt_f</span><span class="p">(</span><span class="n">wstar</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## Affiche la séparation des données à partir de l&#39;optimum xstar_approx choisi</span>
+</span></span><span class="line"><span class="cl"><span class="n">dom_points</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">11</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">grid_size</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">dom_points</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">dom_points</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">grid_size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">grid_size</span><span class="p">,</span> <span class="n">grid_size</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Graphique des lignes de niveaux</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">CS</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&#34;viridis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">CS</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">yi_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;red&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">xi_list</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;green&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">CS</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Data separation, green points y=0, red points y=1&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s2">&#34;equal&#34;</span><span class="p">,</span> <span class="n">adjustable</span> <span class="o">=</span> <span class="s2">&#34;box&#34;</span><span class="p">)</span> <span class="c1"># pour que les axes aient la même échelle</span>
+</span></span></code></pre></div><h3 id="exercice-8-bfgs">Exercice 8: BFGS</h3>
+<p>Code the BFGS algorithm with the logistic regression (no-hidden layer)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">wolfe_rule</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">gradf</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">eta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># same as before but with H instead of the hessian</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#  Newton algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">BFGS</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">gradf</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">x_list</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">%%</span><span class="n">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">eps</span> <span class="o">=</span> <span class="mf">1e-5</span>
+</span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="mf">.4</span>
+</span></span><span class="line"><span class="cl"><span class="n">gamma</span><span class="o">=</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="mf">0.5</span><span class="c1">#1e-2</span>
+</span></span><span class="line"><span class="cl"><span class="n">c2</span><span class="o">=</span><span class="mf">.8</span>
+</span></span><span class="line"><span class="cl"><span class="n">eta</span><span class="o">=</span><span class="mf">2.</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span> <span class="o">=</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">xlist_approx</span> <span class="o">=</span> <span class="n">BFGS</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">gradf</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span> <span class="n">eps</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">xlist_approx</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">len</span><span class="p">(</span><span class="n">xlist_approx</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#fig, ax = level_circle(f,dom)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">plot_descent</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">dom</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">,</span> <span class="n">xlist_approx</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span></code></pre></div>
     </div>
 
     
@@ -1631,7 +1854,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F&amp;text=Tp4" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F&amp;text=TP&#43;2&#43;%28End%29" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1648,7 +1871,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F&amp;t=Tp4" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F&amp;t=TP&#43;2&#43;%28End%29" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1667,7 +1890,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
         
       
       <li>
-        <a href="mailto:?subject=Tp4&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=TP%202%20%28End%29&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1684,7 +1907,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F&amp;title=Tp4" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F&amp;title=TP&#43;2&#43;%28End%29" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1701,7 +1924,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Tp4%20https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=TP&#43;2&#43;%28End%29%20https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1718,7 +1941,7 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp4ent306%2F&amp;title=Tp4" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Ftp5%2F&amp;title=TP&#43;2&#43;%28End%29" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
