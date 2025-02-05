@@ -4055,9 +4055,14 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://example.com/teaching/ensta_apm_5en06_ta/</guid>
       <description>&lt;ul&gt;
-&lt;li&gt;link to slides:
-&lt;a href=&#34;slides1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Link to the project dataset: &lt;a href=&#34;smart_home_device_usage_data.csv&#34;&gt;smart_home_device_usage_data.csv&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link to slides:&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;slides1.pdf&#34;&gt;slides 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;slides3.pdf&#34;&gt;slides 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;slides4.pdf&#34;&gt;slides 3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;slides5.pdf&#34;&gt;slides 4&lt;/a&gt;&lt;/p&gt;
