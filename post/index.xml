@@ -457,11 +457,10 @@ Then, for a new unlabeled data $x$, we were computing $\sigma(\langle w,x\rangle
 In our case, this means increasing the dimensions of both $x$ and $w$ from $3$ to $4$: we redefine
 $$x=(x^0,x^1,x^2,1) \textrm{ and } w=(w^0,w^1,w^2,b).$$
 This transformation allows us to maintain the same matrix notation as before in the optimization step.&lt;/p&gt;
-&lt;p&gt;The log-loss function with a penalization term in $L^2$ is thus given by:
+&lt;p&gt;The log-loss function without a penalization term is thus given by:
 \begin{equation*}
-f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log (1-\sigma(\langle w,x_i \rangle)) + \lambda \frac12 \lVert w\rVert^2,
-\end{equation*}
-where $\lambda$ is a regularization parameter.&lt;/p&gt;
+f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log (1-\sigma(\langle w,x_i \rangle)).
+\end{equation*}&lt;/p&gt;
 &lt;h4 id=&#34;data-plot&#34;&gt;Data plot&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# data plot&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;mpl_toolkits.mplot3d&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Axes3D&lt;/span&gt;
