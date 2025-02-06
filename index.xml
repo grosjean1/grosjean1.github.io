@@ -381,15 +381,7 @@ val [123.99999994]
     </item>
     
     <item>
-      <title>My Post</title>
-      <link>https://example.com/post/my-post/</link>
-      <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/my-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>My Post</title>
+      <title>ENT306</title>
       <link>https://example.com/post/project/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
       <guid>https://example.com/post/project/</guid>
@@ -722,6 +714,14 @@ where $\lambda$ is a regularization parameter.&lt;/p&gt;
 &lt;p&gt;How do the parameters seem to influence classification?&lt;/p&gt;
 &lt;p&gt;Bonus: What would you recommend to avoid overfitting? How to be more confidence in our model?&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>My Post</title>
+      <link>https://example.com/post/my-post/</link>
+      <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
+      <guid>https://example.com/post/my-post/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -4393,6 +4393,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Link to the project dataset: &lt;a href=&#34;smart_home_device_usage_data.csv&#34;&gt;smart_home_device_usage_data.csv&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Link to the project notebook: &lt;a href=&#34;https://example.com/post/project&#34;&gt;notebook&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to slides:&lt;/p&gt;
