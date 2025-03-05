@@ -220,6 +220,9 @@
     <loc>https://example.com/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/miscellaneous/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/tags/</loc>
     <changefreq>weekly</changefreq>
   </url>
