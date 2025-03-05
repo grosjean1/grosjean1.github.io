@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>Séminaire IRMA - Strasbourg</title>
+      <link>https://example.com/talk/seminaire-irma-strasbourg/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.com/talk/seminaire-irma-strasbourg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>TP1</title>
       <link>https://example.com/post/notebookdynprog/</link>
       <pubDate>Mon, 16 Dec 2024 22:38:00 +0100</pubDate>
