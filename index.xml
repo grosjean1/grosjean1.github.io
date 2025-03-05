@@ -4207,6 +4207,14 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     </item>
     
     <item>
+      <title>Séminaire Lamfa</title>
+      <link>https://example.com/miscellaneous/drawings/</link>
+      <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.com/miscellaneous/drawings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Séminaire interne M3DISIM - INRIA</title>
       <link>https://example.com/talk/seminaire-interne-m3disim-inria/</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
