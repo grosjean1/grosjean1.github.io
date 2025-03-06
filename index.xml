@@ -14,17 +14,17 @@
     
     <item>
       <title>Séminaire IRMA - Strasbourg</title>
-      <link>https://example.com/talk/seminaire-irma-strasbourg/</link>
+      <link>https://example.com/talk/seminaire-irma-strasbourg.html</link>
       <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/seminaire-irma-strasbourg/</guid>
+      <guid>https://example.com/talk/seminaire-irma-strasbourg.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>TP1</title>
-      <link>https://example.com/post/notebookdynprog/</link>
+      <link>https://example.com/post/notebookdynprog.html</link>
       <pubDate>Mon, 16 Dec 2024 22:38:00 +0100</pubDate>
-      <guid>https://example.com/post/notebookdynprog/</guid>
+      <guid>https://example.com/post/notebookdynprog.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -390,9 +390,9 @@ val [123.99999994]
     
     <item>
       <title>ENT306</title>
-      <link>https://example.com/post/project/</link>
+      <link>https://example.com/post/project.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/project/</guid>
+      <guid>https://example.com/post/project.html</guid>
       <description>&lt;center&gt;&lt;h1&gt; Project &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
@@ -725,17 +725,17 @@ f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log 
     
     <item>
       <title>My Post</title>
-      <link>https://example.com/post/my-post/</link>
+      <link>https://example.com/post/my-post.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/my-post/</guid>
+      <guid>https://example.com/post/my-post.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>TP 2 (End)</title>
-      <link>https://example.com/post/tp5/</link>
+      <link>https://example.com/post/tp5.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp5/</guid>
+      <guid>https://example.com/post/tp5.html</guid>
       <description>&lt;center&gt;&lt;h1&gt; TP 4 &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numdifftools&lt;/span&gt;
@@ -1521,9 +1521,9 @@ where $C$ is the penalization parameter.&lt;/p&gt;
     
     <item>
       <title>TP 3</title>
-      <link>https://example.com/post/tp3ent306/</link>
+      <link>https://example.com/post/tp3ent306.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp3ent306/</guid>
+      <guid>https://example.com/post/tp3ent306.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -2219,9 +2219,9 @@ s.t&lt;/p&gt;
     
     <item>
       <title>Tp2</title>
-      <link>https://example.com/post/tp2ent306/</link>
+      <link>https://example.com/post/tp2ent306.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp2ent306/</guid>
+      <guid>https://example.com/post/tp2ent306.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -2843,9 +2843,9 @@ s.t&lt;/p&gt;
     
     <item>
       <title>Tp4</title>
-      <link>https://example.com/post/tp4ent306/</link>
+      <link>https://example.com/post/tp4ent306.html</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp4ent306/</guid>
+      <guid>https://example.com/post/tp4ent306.html</guid>
       <description>&lt;center&gt;&lt;h1&gt; TP 4 &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;
@@ -3408,25 +3408,25 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Idefix Days 2024</title>
-      <link>https://example.com/talk/idefix-days-2024/</link>
+      <link>https://example.com/talk/idefix-days-2024.html</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/idefix-days-2024/</guid>
+      <guid>https://example.com/talk/idefix-days-2024.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mathematics and Art, exploring connections</title>
-      <link>https://example.com/talk/mathematics-and-art-exploring-connections/</link>
+      <link>https://example.com/talk/mathematics-and-art-exploring-connections.html</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/mathematics-and-art-exploring-connections/</guid>
+      <guid>https://example.com/talk/mathematics-and-art-exploring-connections.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exo7</title>
-      <link>https://example.com/post/exo7/</link>
+      <link>https://example.com/post/exo7.html</link>
       <pubDate>Tue, 15 Oct 2024 08:59:10 +0200</pubDate>
-      <guid>https://example.com/post/exo7/</guid>
+      <guid>https://example.com/post/exo7.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#incoming flow&lt;/span&gt;
@@ -3465,9 +3465,9 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Exo6</title>
-      <link>https://example.com/post/exo6/</link>
+      <link>https://example.com/post/exo6.html</link>
       <pubDate>Tue, 15 Oct 2024 08:48:12 +0200</pubDate>
-      <guid>https://example.com/post/exo6/</guid>
+      <guid>https://example.com/post/exo6.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;param&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nrange&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1790&lt;/span&gt;  
@@ -3524,9 +3524,9 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Notebook4</title>
-      <link>https://example.com/post/notebook4/</link>
+      <link>https://example.com/post/notebook4.html</link>
       <pubDate>Tue, 24 Sep 2024 14:59:19 +0200</pubDate>
-      <guid>https://example.com/post/notebook4/</guid>
+      <guid>https://example.com/post/notebook4.html</guid>
       <description>&lt;h1 id=&#34;gradient-descent-with-projection-and-augmented-lagrangian-algorithm&#34;&gt;Gradient descent with projection and augmented lagrangian algorithm&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) |  x= y}$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
@@ -3833,9 +3833,9 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
     
     <item>
       <title>Gradient descent</title>
-      <link>https://example.com/post/notebook2/</link>
+      <link>https://example.com/post/notebook2.html</link>
       <pubDate>Thu, 05 Sep 2024 22:05:54 +0200</pubDate>
-      <guid>https://example.com/post/notebook2/</guid>
+      <guid>https://example.com/post/notebook2.html</guid>
       <description>&lt;h1 id=&#34;gradient-descent&#34;&gt;Gradient descent&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \mathbb{R}^2$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
@@ -4113,9 +4113,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Notebook Pyampl tuto</title>
-      <link>https://example.com/post/notebook1/</link>
+      <link>https://example.com/post/notebook1.html</link>
       <pubDate>Thu, 05 Sep 2024 22:02:43 +0200</pubDate>
-      <guid>https://example.com/post/notebook1/</guid>
+      <guid>https://example.com/post/notebook1.html</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -4168,81 +4168,81 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Cell seeding dynamics in a porous scaffold material designed for meniscus tissue regeneration</title>
-      <link>https://example.com/publication/publi7/</link>
+      <link>https://example.com/publication/publi7.html</link>
       <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi7/</guid>
+      <guid>https://example.com/publication/publi7.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Séminaire Idefix ENSTA 2024</title>
-      <link>https://example.com/talk/seminaire-idefix-ensta-2024/</link>
+      <link>https://example.com/talk/seminaire-idefix-ensta-2024.html</link>
       <pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/seminaire-idefix-ensta-2024/</guid>
+      <guid>https://example.com/talk/seminaire-idefix-ensta-2024.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Séminaire ANEDP au laboratoire Paul Painlevé</title>
-      <link>https://example.com/talk/seminaire-anedp-au-laboratoire-paul-painleve/</link>
+      <link>https://example.com/talk/seminaire-anedp-au-laboratoire-paul-painleve.html</link>
       <pubDate>Thu, 14 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/seminaire-anedp-au-laboratoire-paul-painleve/</guid>
+      <guid>https://example.com/talk/seminaire-anedp-au-laboratoire-paul-painleve.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>An in-silico approach to meniscus tissue regeneration: Modeling, numerical simulation, and experimental analysis</title>
-      <link>https://example.com/publication/publi6/</link>
+      <link>https://example.com/publication/publi6.html</link>
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi6/</guid>
+      <guid>https://example.com/publication/publi6.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Séminaire Lamfa</title>
-      <link>https://example.com/talk/seminaire-lamfa/</link>
+      <link>https://example.com/talk/seminaire-lamfa.html</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/seminaire-lamfa/</guid>
+      <guid>https://example.com/talk/seminaire-lamfa.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Séminaire interne M3DISIM - INRIA</title>
-      <link>https://example.com/talk/seminaire-interne-m3disim-inria/</link>
+      <link>https://example.com/talk/seminaire-interne-m3disim-inria.html</link>
       <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/seminaire-interne-m3disim-inria/</guid>
+      <guid>https://example.com/talk/seminaire-interne-m3disim-inria.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (M2AN)</title>
-      <link>https://example.com/publication/publi4/</link>
+      <link>https://example.com/publication/publi4.html</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi4/</guid>
+      <guid>https://example.com/publication/publi4.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations, SMAI: JCM 9 (2023) 227-256</title>
-      <link>https://example.com/publication/publi3/</link>
+      <link>https://example.com/publication/publi3.html</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi3/</guid>
+      <guid>https://example.com/publication/publi3.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>ICCB2023</title>
-      <link>https://example.com/talk/iccb2023/</link>
+      <link>https://example.com/talk/iccb2023.html</link>
       <pubDate>Wed, 20 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/iccb2023/</guid>
+      <guid>https://example.com/talk/iccb2023.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>SPP2311-Kick-off</title>
-      <link>https://example.com/talk/spp2311-kick-off/</link>
+      <link>https://example.com/talk/spp2311-kick-off.html</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/spp2311-kick-off/</guid>
+      <guid>https://example.com/talk/spp2311-kick-off.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on the numerical aspects of a Coupled analysis of active biological processes for meniscus tissue regeneration
 &lt;a href=&#34;https://www.spp2311.uni-stuttgart.de/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4252,33 +4252,33 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>A mathematical model for meniscus cartilage regeneration (PAMM)</title>
-      <link>https://example.com/publication/publi5/</link>
+      <link>https://example.com/publication/publi5.html</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi5/</guid>
+      <guid>https://example.com/publication/publi5.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>GAMM Annual Meeting 2023</title>
-      <link>https://example.com/talk/gamm-annual-meeting-2023/</link>
+      <link>https://example.com/talk/gamm-annual-meeting-2023.html</link>
       <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/gamm-annual-meeting-2023/</guid>
+      <guid>https://example.com/talk/gamm-annual-meeting-2023.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Campus France Presentation</title>
-      <link>https://example.com/talk/campus-france-presentation/</link>
+      <link>https://example.com/talk/campus-france-presentation.html</link>
       <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/campus-france-presentation/</guid>
+      <guid>https://example.com/talk/campus-france-presentation.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>MAP5 Groupe de travail Modelisation, Analyse, Simulation</title>
-      <link>https://example.com/talk/map5-groupe-de-travail-modelisation-analyse-simulation/</link>
+      <link>https://example.com/talk/map5-groupe-de-travail-modelisation-analyse-simulation.html</link>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/map5-groupe-de-travail-modelisation-analyse-simulation/</guid>
+      <guid>https://example.com/talk/map5-groupe-de-travail-modelisation-analyse-simulation.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://map5.mi.parisdescartes.fr/seminairesMAP5/exposes/elise-grosjean-felix-klein-zentrum-fur-mathematik-tuk-kaiserslautern-germany/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -4287,9 +4287,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Tutor at Department of Mathematics, TU Kaiserslautern</title>
-      <link>https://example.com/teaching/tuk/</link>
+      <link>https://example.com/teaching/tuk.html</link>
       <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/teaching/tuk/</guid>
+      <guid>https://example.com/teaching/tuk.html</guid>
       <description>&lt;p&gt;Differential-Algebraic Equations
 &lt;a href=&#34;https://www.mathematik.uni-kl.de/en/das/teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Website&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -4297,9 +4297,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>CANUM 2022</title>
-      <link>https://example.com/talk/canum-2022/</link>
+      <link>https://example.com/talk/canum-2022.html</link>
       <pubDate>Mon, 13 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/canum-2022/</guid>
+      <guid>https://example.com/talk/canum-2022.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://canum2020.math.cnrs.fr/accueil/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Talk&lt;/em&gt;&lt;/a&gt; on non-intrusive reduced basis methods applied to parabolic equations.&lt;/li&gt;
 &lt;/ul&gt;
@@ -4308,9 +4308,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Simulation and Optimization for Renewable Marine Energies</title>
-      <link>https://example.com/talk/simulation-and-optimization-for-renewable-marine-energies/</link>
+      <link>https://example.com/talk/simulation-and-optimization-for-renewable-marine-energies.html</link>
       <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/simulation-and-optimization-for-renewable-marine-energies/</guid>
+      <guid>https://example.com/talk/simulation-and-optimization-for-renewable-marine-energies.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on non intrusive reduced basis 2-grid method applied to wind farm simulations.
 &lt;a href=&#34;https://emrsim2022.sciencesconf.org/data/Abstract.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4320,9 +4320,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>SPP2311-Kick-off</title>
-      <link>https://example.com/talk/spp2311-kick-off/</link>
+      <link>https://example.com/talk/spp2311-kick-off.html</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/spp2311-kick-off/</guid>
+      <guid>https://example.com/talk/spp2311-kick-off.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on the numerical aspects of a Coupled analysis of active biological processes for meniscus tissue regeneration
 &lt;a href=&#34;https://www.spp2311.uni-stuttgart.de/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4332,17 +4332,17 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
-      <link>https://example.com/publication/publi2/</link>
+      <link>https://example.com/publication/publi2.html</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi2/</guid>
+      <guid>https://example.com/publication/publi2.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Workshop Mathematics of High-Performance Computing</title>
-      <link>https://example.com/talk/workshop-mathematics-of-high-performance-computing/</link>
+      <link>https://example.com/talk/workshop-mathematics-of-high-performance-computing.html</link>
       <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/workshop-mathematics-of-high-performance-computing/</guid>
+      <guid>https://example.com/talk/workshop-mathematics-of-high-performance-computing.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on optimizations of a non-intrusive reduced basis method
 &lt;a href=&#34;https://morss2020.epfl.ch/wp-content/uploads/2020/08/MORSS2020_schedule.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4352,17 +4352,17 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961</title>
-      <link>https://example.com/publication/publi1/</link>
+      <link>https://example.com/publication/publi1.html</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi1/</guid>
+      <guid>https://example.com/publication/publi1.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>CAN-J 2020</title>
-      <link>https://example.com/talk/can-j-2020/</link>
+      <link>https://example.com/talk/can-j-2020.html</link>
       <pubDate>Thu, 03 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/can-j-2020/</guid>
+      <guid>https://example.com/talk/can-j-2020.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://indico.math.cnrs.fr/event/6098/contributions/4869/attachments/2643/3353/PRESENTATION_CANUM.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Talk&lt;/em&gt;&lt;/a&gt; on non intrusive reduced basis methods applied to finite volume schemes.&lt;/li&gt;
 &lt;/ul&gt;
@@ -4371,9 +4371,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>GTT LJLL</title>
-      <link>https://example.com/talk/gtt-ljll/</link>
+      <link>https://example.com/talk/gtt-ljll.html</link>
       <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/gtt-ljll/</guid>
+      <guid>https://example.com/talk/gtt-ljll.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;media/PRESENTATION_GTT.pdf&#34;&gt;&lt;strong&gt;Presentation&lt;/strong&gt;&lt;/a&gt; on non intrusive reduced basis methods applied to finite volume schemes.&lt;/li&gt;
 &lt;/ul&gt;
@@ -4382,9 +4382,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Model Order Reduction Summer School MORSS2020</title>
-      <link>https://example.com/talk/model-order-reduction-summer-school-morss2020/</link>
+      <link>https://example.com/talk/model-order-reduction-summer-school-morss2020.html</link>
       <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/model-order-reduction-summer-school-morss2020/</guid>
+      <guid>https://example.com/talk/model-order-reduction-summer-school-morss2020.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Presentation&lt;/strong&gt; on non intrusive reduced basis methods applied to finite volume schemes.
 &lt;a href=&#34;https://morss2020.epfl.ch/wp-content/uploads/2020/08/MORSS2020_schedule.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Program&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -4394,15 +4394,15 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>APM_5EN06_TA at ENSTA-Paris</title>
-      <link>https://example.com/teaching/ensta_apm_5en06_ta/</link>
+      <link>https://example.com/teaching/ensta_apm_5en06_ta.html</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/teaching/ensta_apm_5en06_ta/</guid>
+      <guid>https://example.com/teaching/ensta_apm_5en06_ta.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Link to the project dataset: &lt;a href=&#34;smart_home_device_usage_data.csv&#34;&gt;smart_home_device_usage_data.csv&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Link to the project notebook: &lt;a href=&#34;https://example.com/post/project&#34;&gt;notebook&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Link to the project notebook: &lt;a href=&#34;./post/project&#34;&gt;notebook&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to slides:&lt;/p&gt;
@@ -4416,36 +4416,36 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
 &lt;p&gt;&lt;a href=&#34;scenarios.mat&#34;&gt;scenarios.mat for TP2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;slides2.pdf&#34;&gt;Other test&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;link to TP 1: &lt;a href=&#34;https://example.com/post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;link to TP 2: &lt;a href=&#34;https://example.com/post/tp2ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;link to TP 3: &lt;a href=&#34;https://example.com/post/tp3ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;link to TP 4: &lt;a href=&#34;https://example.com/post/tp4ent306&#34;&gt;Supervised classification&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;link to TP 5: &lt;a href=&#34;https://example.com/post/tp5&#34;&gt;Supervised classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to TP 1: &lt;a href=&#34;./post/notebookdynprog&#34;&gt;Dynamic programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to TP 2: &lt;a href=&#34;./post/tp2ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to TP 3: &lt;a href=&#34;./post/tp3ent306&#34;&gt;Dynamic programming and autoregressive processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to TP 4: &lt;a href=&#34;./post/tp4ent306&#34;&gt;Supervised classification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;link to TP 5: &lt;a href=&#34;./post/tp5&#34;&gt;Supervised classification&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
     
     <item>
       <title>APM_5EN5A_TA at ENSTA-Paris</title>
-      <link>https://example.com/teaching/ensta/</link>
+      <link>https://example.com/teaching/ensta.html</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/teaching/ensta/</guid>
+      <guid>https://example.com/teaching/ensta.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://synapses.ensta-paris.fr/catalogue/2023-2024/ue/791/PGE305-A-optimisation-continue&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to ENSTA course description&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;link to tutorial :
 &lt;a href=&#34;ampl_tutorial.pdf&#34;&gt;ampl&lt;/a&gt;
 and in python
-&lt;a href=&#34;https://example.com/post/notebook1&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;./post/notebook1&#34;&gt;pyampl&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to first TP exercice: &lt;a href=&#34;https://example.com/post/notebook2&#34;&gt;Gradient Descent TP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to first TP exercice: &lt;a href=&#34;./post/notebook2&#34;&gt;Gradient Descent TP&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to second TP exercice: &lt;a href=&#34;https://example.com/post/notebook3&#34;&gt;Gradient Descent with Augmented Lagrangian&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to second TP exercice: &lt;a href=&#34;./post/notebook3&#34;&gt;Gradient Descent with Augmented Lagrangian&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to second TP exercice: &lt;a href=&#34;https://example.com/post/notebook4&#34;&gt;Gradient Descent with Augmented Lagrangian (correction)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to second TP exercice: &lt;a href=&#34;./post/notebook4&#34;&gt;Gradient Descent with Augmented Lagrangian (correction)&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to slides - part I : &lt;a href=&#34;Slide1.pdf&#34;&gt;slides - part 1&lt;/a&gt;&lt;/p&gt;
@@ -4470,10 +4470,10 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
 &lt;p&gt;Slides exercices en cours &lt;a href=&#34;SlidesTD.pdf&#34;&gt;ici&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to exercice 6 : &lt;a href=&#34;https://example.com/post/exo6&#34;&gt;exo 6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to exercice 6 : &lt;a href=&#34;./post/exo6&#34;&gt;exo 6&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to exercice 7 : &lt;a href=&#34;https://example.com/post/exo7&#34;&gt;exo 7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;link to exercice 7 : &lt;a href=&#34;./post/exo7&#34;&gt;exo 7&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -4481,18 +4481,18 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
     
     <item>
       <title>Tutor at l&#39;école nationale de la statistique et de l&#39;administration économique (ENSAE)</title>
-      <link>https://example.com/teaching/ensae/</link>
+      <link>https://example.com/teaching/ensae.html</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://example.com/teaching/ensae/</guid>
+      <guid>https://example.com/teaching/ensae.html</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.ensae.fr/courses/analyse-numerique-et-applications/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link to ENSAE website&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Poster Session 50 LJLL</title>
-      <link>https://example.com/talk/poster-session-50-ljll/</link>
+      <link>https://example.com/talk/poster-session-50-ljll.html</link>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://example.com/talk/poster-session-50-ljll/</guid>
+      <guid>https://example.com/talk/poster-session-50-ljll.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ljll.math.upmc.fr/50ans/posters/Grosjean_LJLL50.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Poster presentation&lt;/strong&gt;&lt;/a&gt; on non intrusive reduced basis methods applied to wind farms.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Painting exhibition&lt;/strong&gt; (see above)&lt;/li&gt;
@@ -4502,9 +4502,9 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
     
     <item>
       <title>Tutor at Sorbonne université</title>
-      <link>https://example.com/teaching/sorbonne/</link>
+      <link>https://example.com/teaching/sorbonne.html</link>
       <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://example.com/teaching/sorbonne/</guid>
+      <guid>https://example.com/teaching/sorbonne.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.ljll.math.upmc.fr/kassab/cours.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;4M026  Approximation des équations aux derivées partielles&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
@@ -4524,24 +4524,9 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
     
     <item>
       <title></title>
-      <link>https://example.com/miscellaneous/drawings/</link>
+      <link>https://example.com/post/notebook3.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/miscellaneous/drawings/</guid>
-      <description>&lt;p&gt;widget: slider
-headless: true
-slides:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;image: /uploads/Drawings/1.png&lt;/li&gt;
-&lt;li&gt;image: /uploads/Drawings/2.png&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://example.com/post/notebook3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/post/notebook3/</guid>
+      <guid>https://example.com/post/notebook3.html</guid>
       <description>&lt;h1 id=&#34;gradient-descent-with-projection-and-augmented-lagrangian-algorithm&#34;&gt;Gradient descent with projection and augmented lagrangian algorithm&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) |  x= y}$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
@@ -4847,10 +4832,18 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
     </item>
     
     <item>
-      <title>My page</title>
-      <link>https://example.com/miscellaneous/</link>
+      <title>My drawings/paintings (Slides)</title>
+      <link>https://example.com/miscellaneous/drawings.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/miscellaneous/</guid>
+      <guid>https://example.com/miscellaneous/drawings.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My page</title>
+      <link>https://example.com/miscellaneous.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/miscellaneous.html</guid>
       <description></description>
     </item>
     

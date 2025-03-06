@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 6, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="../js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="../css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="../css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="../css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="../css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Elise Grosjean" />
+
+
+
+
+
+  
+
+<meta name="description" content="Gradient descent with projection and augmented lagrangian algorithm To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2&#43;(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) | x= y}$." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://example.com/post/notebook4.html" />
+<link rel="canonical" href="https://example.com/post/notebook4.html" />
+
+
+
+  <link rel="manifest" href="../manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="../media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="../media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Academic" />
+<meta property="og:url" content="https://example.com/post/notebook4.html" />
+<meta property="og:title" content="Notebook4 | Academic" />
+<meta property="og:description" content="Gradient descent with projection and augmented lagrangian algorithm To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2&#43;(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) | x= y}$." /><meta property="og:image" content="https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-09-24T14:59:19&#43;02:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-09-24T14:59:19&#43;02:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.com/post/notebook4.html"
+  },
+  "headline": "Notebook4",
+  
+  "datePublished": "2024-09-24T14:59:19+02:00",
+  "dateModified": "2024-09-24T14:59:19+02:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Elise Grosjean"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Gradient descent with projection and augmented lagrangian algorithm To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\\subset \\mathbb{R}^2$ with $K={(x,y) | x= y}$."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Notebook4 | Academic</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ed2b200e4dca62049592fadd9d453f8b" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="../js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="../">Academic</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="../">Academic</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#publications"><span>publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#Projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#Experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#Miscellaneous"><span>Miscellaneous</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../uploads/thesis.pdf"><span>Thesis manuscript</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="../google0eca90bf5d4cf0c4.html"><span>google</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Notebook4</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Sep 24, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="gradient-descent-with-projection-and-augmented-lagrangian-algorithm">Gradient descent with projection and augmented lagrangian algorithm</h1>
+<p>To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) |  x= y}$.
+We start by manually compute its gradient and we will display its evolution during gradient descent.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</span></span></code></pre></div><h3 id="1-complete-the-following-code">1. Complete the following code</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># function</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">x1</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">x2</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># gradient</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># constraint</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">-</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># constraint gradient</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">L</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1"># lagrangian</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Lc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1"># augmented lagrangian</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span><span class="n">c</span><span class="o">/</span><span class="mf">2.</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">),</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1"># augmented lagrangian gradient</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">df</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span><span class="o">+</span> <span class="n">c</span><span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">),</span><span class="n">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span> <span class="o">+</span><span class="n">mu</span><span class="o">*</span> <span class="p">(</span><span class="n">dg</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span> <span class="c1">#(x1-x2) (1,-1)</span>
+</span></span></code></pre></div><p>We need to define a norm to now how far from the global solution we are.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">norm</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><p>With $\alpha$ too big, we found out that the solution blows up in the previous exercice, a correct choice for $\alpha$ is very important. That is why, we will proceed with Armijo-Wolfe rule:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Wolfe rule:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="mf">.6</span>
+</span></span><span class="line"><span class="cl"><span class="n">c2</span><span class="o">=</span><span class="mf">.8</span>
+</span></span><span class="line"><span class="cl"><span class="n">beta</span><span class="o">=</span><span class="mf">1.</span> <span class="c1">#test with beta=1</span>
+</span></span><span class="line"><span class="cl"><span class="n">eta</span><span class="o">=</span><span class="mf">2.</span>
+</span></span><span class="line"><span class="cl"><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">phik</span><span class="p">(</span><span class="n">xyk</span><span class="p">,</span><span class="n">alphak</span><span class="p">,</span><span class="n">dk</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">fc</span><span class="p">(</span><span class="n">xyk</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">alphak</span><span class="o">*</span><span class="n">dk</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xyk</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">alphak</span><span class="o">*</span><span class="n">dk</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">dphik</span><span class="p">(</span><span class="n">xyk</span><span class="p">,</span><span class="n">alphak</span><span class="p">,</span><span class="n">dk</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span><span class="o">=</span><span class="n">dfc</span><span class="p">(</span><span class="n">xyk</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">alphak</span><span class="o">*</span><span class="n">dk</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xyk</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">alphak</span><span class="o">*</span><span class="n">dk</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">grad_f</span><span class="p">,</span><span class="n">dk</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">wolfe_rule</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span> <span class="c1">#d_x est la direction de descente d_x . grad_x &lt;= 0</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># test f(x_new) \leq f(x_0) + c alpha ps{d_x}{grad_x}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">min_</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">max_</span> <span class="o">=</span> <span class="mi">1000</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">&lt;=</span><span class="p">(</span><span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">c1</span><span class="o">*</span><span class="n">dphik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">alpha</span><span class="p">))</span> <span class="o">&amp;</span><span class="p">(</span><span class="n">iteration</span><span class="o">&lt;=</span><span class="mi">500</span><span class="p">):</span> <span class="c1">#armijo ok</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">eta</span><span class="o">*</span><span class="n">alpha</span>
+</span></span><span class="line"><span class="cl">    <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">test</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">iteration</span><span class="o">&lt;=</span><span class="mi">500</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">xnew0</span><span class="p">,</span><span class="n">xnew1</span><span class="o">=</span><span class="n">xy_old</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy_old</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">&lt;=</span> <span class="p">(</span><span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">c1</span><span class="o">*</span><span class="n">dphik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">alpha</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dfc</span><span class="p">(</span><span class="n">xnew0</span><span class="p">,</span><span class="n">xnew1</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="n">d</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">c2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dfc</span><span class="p">(</span><span class="n">xy_old</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy_old</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">),</span><span class="n">d</span><span class="p">)</span> <span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">test</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">phik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="n">c1</span><span class="o">*</span><span class="n">dphik</span><span class="p">(</span><span class="n">xy_old</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">alpha</span><span class="p">):</span> <span class="c1">#no armijo</span>
+</span></span><span class="line"><span class="cl">            <span class="n">max_</span> <span class="o">=</span> <span class="n">alpha</span>
+</span></span><span class="line"><span class="cl">            <span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_</span> <span class="o">+</span> <span class="n">min_</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">iteration</span> <span class="o">=</span> <span class="n">iteration</span> <span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span> <span class="c1"># armijo ok</span>
+</span></span><span class="line"><span class="cl">            <span class="n">minorant</span> <span class="o">=</span> <span class="n">alpha</span>
+</span></span><span class="line"><span class="cl">            <span class="n">alpha</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_</span> <span class="o">+</span> <span class="n">min_</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">iteration</span> <span class="o">=</span> <span class="n">iteration</span> <span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">alpha</span>
+</span></span></code></pre></div><h3 id="2-now-we-proceed-with-the-gradient-descent-algorithm-with-armijo-wolfe-rule-complete-the-following-code">2. Now we proceed with the Gradient descent algorithm with Armijo-Wolfe rule: Complete the following code</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">GradientDescent</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#initialization for Armijo</span>
+</span></span><span class="line"><span class="cl">    <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># start GD algorithm</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="o">=</span><span class="n">xy0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#starting points</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1">#gradient function</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cpt_grad</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">grad_f</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">eps</span> <span class="ow">and</span> <span class="n">cpt_grad</span><span class="o">&lt;</span><span class="mi">500</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad_f</span> <span class="c1">#direction</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>  <span class="c1">#armijo</span>
+</span></span><span class="line"><span class="cl">        <span class="n">xy_old</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">])</span>        
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">wolfe_rule</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1"># find best alpha</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">x0</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y0</span> <span class="o">+</span> <span class="n">alpha</span><span class="o">*</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">evolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">evolution</span><span class="p">,</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cpt_grad</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">evolution</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h3 id="3-complete-the-code-of-the-augmented-lagrangian">3. Complete the code of the augmented lagrangian:</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#initialization for Armijo</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## start GD algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># initial points</span>
+</span></span><span class="line"><span class="cl"><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">=</span><span class="mf">1.</span> <span class="c1"># penalty parameter</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu</span><span class="o">=</span><span class="mf">1.7</span> <span class="c1"># dual variable</span>
+</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1"># not a golden function, but the constraints are very precious</span>
+</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span> <span class="c1"># gradient of the augmented lagrangian</span>
+</span></span><span class="line"><span class="cl"><span class="n">cpt</span><span class="o">=</span><span class="mi">0</span> <span class="c1"># to avoid infinite while loop</span>
+</span></span><span class="line"><span class="cl"><span class="n">xy0</span><span class="o">=</span><span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">)</span><span class="o">&gt;</span><span class="n">eps</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">&gt;</span><span class="n">eps</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=</span><span class="n">GradientDescent</span><span class="p">(</span><span class="n">Lc</span><span class="p">,</span><span class="n">dxLc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="n">evolution_X</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">evolution_Y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># last points</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x1:&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="s2">&#34; x2:&#34;</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)))</span><span class="o">&lt;</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">gold</span><span class="p">):</span> <span class="c1"># if ||g|| is small </span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;||g|| smaller&#34;,np.abs(g(x1,x2)))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="o">+</span><span class="n">c</span><span class="o">*</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#increase mu</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;new mu: &#34;</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="o">*</span><span class="mi">2</span> <span class="c1"># increase c</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;new c: &#34;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cpt</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#updates</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;norm of gradx_f: &#34;</span><span class="p">,</span><span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">cpt</span><span class="o">==</span><span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        
+</span></span></code></pre></div><p>We can display the solution onto the contour of $f$ or onto the contour of $L_c$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;mu&#34;</span><span class="p">,</span><span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#mu=1.#0.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Z = Lc(Xx, Yy,mu=mu,c=0)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">contours</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">inline</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Evolution of the cost function during gradient descent with level circles&#34;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&#34;Cost function&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>mu 0.5000001501871618
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./Notebook4_18_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h3 id="4-we-add-new-constraints-xy-must-stay-in-k-20times--20-complete-the-code-that-finds-the-projection-of-xy-on-a-cuboid-k-then-change-the-gradient-descent-algorithm-to-take-into-account-this-projection-step">4. We add new constraints: $(x,y)$ must stay in $K=[-2.,0]\times [-2,0]$. Complete the code that finds the projection of $(x,y)$ on a cuboid $K$. Then, change the gradient descent algorithm to take into account this projection step</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">proj</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#K=[[l0,u0],[l1,u1]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l0</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u0</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l1</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u1</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># NEW GRADIENT DESCENT ALGORITHM:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">GradientDescent</span><span class="p">(</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#initialization for Armijo</span>
+</span></span><span class="line"><span class="cl">    <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">## start GD algorithm</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="o">=</span><span class="n">xy0</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">xy0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="c1">#1,2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cpt_grad</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">grad_f</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">eps</span> <span class="ow">and</span> <span class="n">cpt_grad</span><span class="o">&lt;</span><span class="mi">500</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">        <span class="n">d</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad_f</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#armijo</span>
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
+</span></span><span class="line"><span class="cl">        <span class="n">xy_old</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="p">])</span>        
+</span></span><span class="line"><span class="cl">        <span class="n">alpha</span><span class="o">=</span><span class="n">wolfe_rule</span><span class="p">(</span><span class="n">alpha</span><span class="p">,</span><span class="n">xy_old</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">fc</span><span class="p">,</span><span class="n">dfc</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">evolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">evolution</span><span class="p">,</span> <span class="p">[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">grad_f</span> <span class="o">=</span> <span class="n">dfc</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cpt_grad</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">evolution</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## AUGMENTED LAGRANGIAN WITH PROJECTION</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="n">beta</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## start GD algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="c1">#0.5</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="o">=</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu</span><span class="o">=</span><span class="mf">1.7</span>
+</span></span><span class="line"><span class="cl"><span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cpt</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">xy0</span><span class="o">=</span><span class="p">[</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">K</span><span class="o">=</span><span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">)</span><span class="o">&gt;</span><span class="n">eps</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">))</span><span class="o">&gt;</span><span class="n">eps</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">=</span><span class="n">GradientDescent</span><span class="p">(</span><span class="n">Lc</span><span class="p">,</span><span class="n">dxLc</span><span class="p">,</span><span class="n">xy0</span><span class="p">,</span><span class="n">beta</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x1</span><span class="o">=</span><span class="n">evolution_X</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x2</span><span class="o">=</span><span class="n">evolution_Y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x1:&#34;</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="s2">&#34; x2:&#34;</span><span class="p">,</span> <span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)))</span><span class="o">&lt;</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">gold</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;||g|| smaller&#34;,np.abs(g(x1,x2)))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span><span class="o">+=</span><span class="n">c</span><span class="o">*</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#print(&#34;mu&#34;, mu)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">c</span><span class="o">*=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;c&#34;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cpt</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gold</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gradx_f</span> <span class="o">=</span> <span class="n">dxLc</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;norm: &#34;</span><span class="p">,</span><span class="n">norm</span><span class="p">(</span><span class="n">gradx_f</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;mu: &#34;</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">cpt</span><span class="o">==</span><span class="mi">20</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></div><h3 id="5-you-should-find-mu1-and-x_1x_200">5. You should find $\mu=1$, and $(x_1,x_2)=0,0$.</h3>
+<p>The constraints $-x_1 \leq 2$ and $-x_2 \leq 2$ are inactive, and thus the associated dual variables are equal to $0$.
+With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associated to $x_1 \leq 0$ and $x_2 \leq 0$.</p>
+<p>Defined the new augmented lagrangian with these constraints added:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;mu&#34;</span><span class="p">,</span><span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu</span><span class="o">=</span><span class="mf">1.</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Lc2</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="c1"># augmented lagrangian with new constraints</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">Lc2</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span><span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Z = f(Xx, Yy)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">contours</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">inline</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Evolution of the cost function during gradient descent with level circles&#34;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&#34;Cost function&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>mu 0.5
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./Notebook4_25_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html&amp;text=Notebook4" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html&amp;t=Notebook4" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Notebook4&amp;body=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html&amp;title=Notebook4" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Notebook4%20https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fexample.com%2Fpost%2Fnotebook4.html&amp;title=Notebook4" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://example.com/"><img class="avatar mr-3 avatar-circle" src="../authors/admin/avatar_hue5c65b85e6acd43a0b536d5f250ce9ce_115900_270x270_fill_q75_lanczos_center.jpg" alt="Elise Grosjean"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://example.com/">Elise Grosjean</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">My research interests include numerics, P.D.E analysis, Reduced basis methods, inverse problems.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="../#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/grosjean1" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://reducedbasis.github.io" target="_blank" rel="noopener">
+        <i class="fab fa-coding"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="../js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="../js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="../en/js/wowchemy.min.7f5ebaff62ae468cff8bb3dd1337bb9b.js"></script>
+
+
+
+  <script src="../js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="../js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
