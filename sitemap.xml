@@ -214,13 +214,13 @@
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/miscellaneous/drawings/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/post/notebook3/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/categories/</loc>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://example.com/miscellaneous/drawings/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/miscellaneous/</loc>

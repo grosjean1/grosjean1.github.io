@@ -4524,6 +4524,21 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
     
     <item>
       <title></title>
+      <link>https://example.com/miscellaneous/drawings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.com/miscellaneous/drawings/</guid>
+      <description>&lt;p&gt;widget: slider
+headless: true
+slides:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;image: /uploads/Drawings/1.png&lt;/li&gt;
+&lt;li&gt;image: /uploads/Drawings/2.png&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://example.com/post/notebook3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.com/post/notebook3/</guid>
@@ -4829,14 +4844,6 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>My drawings/paintings (Slides)</title>
-      <link>https://example.com/miscellaneous/drawings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/miscellaneous/drawings/</guid>
-      <description></description>
     </item>
     
     <item>
