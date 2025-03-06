@@ -220,10 +220,10 @@
     <loc>https://example.com/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/miscellaneous/</loc>
+    <loc>https://example.com/miscellaneous/drawings/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://example.com/miscellaneous/drawings/</loc>
+    <loc>https://example.com/miscellaneous/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://example.com/tags/</loc>
