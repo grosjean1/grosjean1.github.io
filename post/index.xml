@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | Academic</title>
-    <link>https://example.com/post/</link>
-      <atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <title>Posts | </title>
+    <link>https://grosjean1.github.io/post/</link>
+      <atom:link href="https://grosjean1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 16 Dec 2024 22:38:00 +0100</lastBuildDate>
     <image>
-      <url>https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
-      <link>https://example.com/post/</link>
+      <link>https://grosjean1.github.io/post/</link>
     </image>
     
     <item>
       <title>TP1</title>
-      <link>https://example.com/post/notebookdynprog/</link>
+      <link>https://grosjean1.github.io/post/notebookdynprog/</link>
       <pubDate>Mon, 16 Dec 2024 22:38:00 +0100</pubDate>
-      <guid>https://example.com/post/notebookdynprog/</guid>
+      <guid>https://grosjean1.github.io/post/notebookdynprog/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -382,9 +382,9 @@ val [123.99999994]
     
     <item>
       <title>ENT306</title>
-      <link>https://example.com/post/project/</link>
+      <link>https://grosjean1.github.io/post/project/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/project/</guid>
+      <guid>https://grosjean1.github.io/post/project/</guid>
       <description>&lt;center&gt;&lt;h1&gt; Project &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
@@ -717,17 +717,17 @@ f(w)=-\frac1n \sum_{i=1}^n (y_i log (\sigma(\langle w,x_i \rangle))+ (1-y_i)log 
     
     <item>
       <title>My Post</title>
-      <link>https://example.com/post/my-post/</link>
+      <link>https://grosjean1.github.io/post/my-post/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/my-post/</guid>
+      <guid>https://grosjean1.github.io/post/my-post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TP 2 (End)</title>
-      <link>https://example.com/post/tp5/</link>
+      <link>https://grosjean1.github.io/post/tp5/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp5/</guid>
+      <guid>https://grosjean1.github.io/post/tp5/</guid>
       <description>&lt;center&gt;&lt;h1&gt; TP 4 &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numdifftools&lt;/span&gt;
@@ -1513,9 +1513,9 @@ where $C$ is the penalization parameter.&lt;/p&gt;
     
     <item>
       <title>TP 3</title>
-      <link>https://example.com/post/tp3ent306/</link>
+      <link>https://grosjean1.github.io/post/tp3ent306/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp3ent306/</guid>
+      <guid>https://grosjean1.github.io/post/tp3ent306/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -2211,9 +2211,9 @@ s.t&lt;/p&gt;
     
     <item>
       <title>Tp2</title>
-      <link>https://example.com/post/tp2ent306/</link>
+      <link>https://grosjean1.github.io/post/tp2ent306/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp2ent306/</guid>
+      <guid>https://grosjean1.github.io/post/tp2ent306/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -2835,9 +2835,9 @@ s.t&lt;/p&gt;
     
     <item>
       <title>Tp4</title>
-      <link>https://example.com/post/tp4ent306/</link>
+      <link>https://grosjean1.github.io/post/tp4ent306/</link>
       <pubDate>Fri, 13 Dec 2024 10:19:20 +0100</pubDate>
-      <guid>https://example.com/post/tp4ent306/</guid>
+      <guid>https://grosjean1.github.io/post/tp4ent306/</guid>
       <description>&lt;center&gt;&lt;h1&gt; TP 4 &lt;/h1&gt;&lt;h2&gt;Logistic regression&lt;/h2&gt;&lt;/center&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;
@@ -3400,9 +3400,9 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Exo7</title>
-      <link>https://example.com/post/exo7/</link>
+      <link>https://grosjean1.github.io/post/exo7/</link>
       <pubDate>Tue, 15 Oct 2024 08:59:10 +0200</pubDate>
-      <guid>https://example.com/post/exo7/</guid>
+      <guid>https://grosjean1.github.io/post/exo7/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#incoming flow&lt;/span&gt;
@@ -3441,9 +3441,9 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Exo6</title>
-      <link>https://example.com/post/exo6/</link>
+      <link>https://grosjean1.github.io/post/exo6/</link>
       <pubDate>Tue, 15 Oct 2024 08:48:12 +0200</pubDate>
-      <guid>https://example.com/post/exo6/</guid>
+      <guid>https://grosjean1.github.io/post/exo6/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;param&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nrange&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1790&lt;/span&gt;  
@@ -3500,9 +3500,9 @@ $f(w)  =  \frac{1}{n} \sum_{i=1}^n  f_i(w).$&lt;/p&gt;
     
     <item>
       <title>Notebook4</title>
-      <link>https://example.com/post/notebook4/</link>
+      <link>https://grosjean1.github.io/post/notebook4/</link>
       <pubDate>Tue, 24 Sep 2024 14:59:19 +0200</pubDate>
-      <guid>https://example.com/post/notebook4/</guid>
+      <guid>https://grosjean1.github.io/post/notebook4/</guid>
       <description>&lt;h1 id=&#34;gradient-descent-with-projection-and-augmented-lagrangian-algorithm&#34;&gt;Gradient descent with projection and augmented lagrangian algorithm&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) |  x= y}$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
@@ -3809,9 +3809,9 @@ With $\mu=1$, we find $\lambda_1=1$ and $\lambda_2=0$ the dual variables associa
     
     <item>
       <title>Gradient descent</title>
-      <link>https://example.com/post/notebook2/</link>
+      <link>https://grosjean1.github.io/post/notebook2/</link>
       <pubDate>Thu, 05 Sep 2024 22:05:54 +0200</pubDate>
-      <guid>https://example.com/post/notebook2/</guid>
+      <guid>https://grosjean1.github.io/post/notebook2/</guid>
       <description>&lt;h1 id=&#34;gradient-descent&#34;&gt;Gradient descent&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \mathbb{R}^2$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
@@ -4089,9 +4089,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title>Notebook Pyampl tuto</title>
-      <link>https://example.com/post/notebook1/</link>
+      <link>https://grosjean1.github.io/post/notebook1/</link>
       <pubDate>Thu, 05 Sep 2024 22:02:43 +0200</pubDate>
-      <guid>https://example.com/post/notebook1/</guid>
+      <guid>https://grosjean1.github.io/post/notebook1/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Install package&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sys&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;executable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;numpy&lt;/span&gt;
@@ -4144,9 +4144,9 @@ Requirement already satisfied: six&amp;gt;=1.5 in /usr/local/Cellar/jupyterlab/4
     
     <item>
       <title></title>
-      <link>https://example.com/post/notebook3/</link>
+      <link>https://grosjean1.github.io/post/notebook3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/post/notebook3/</guid>
+      <guid>https://grosjean1.github.io/post/notebook3/</guid>
       <description>&lt;h1 id=&#34;gradient-descent-with-projection-and-augmented-lagrangian-algorithm&#34;&gt;Gradient descent with projection and augmented lagrangian algorithm&lt;/h1&gt;
 &lt;p&gt;To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=0.5(x^2+(y-1)^2)$ that we aim at minimizing on $K\subset \mathbb{R}^2$ with $K={(x,y) |  x= y}$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.&lt;/p&gt;
