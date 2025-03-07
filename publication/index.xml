@@ -2,69 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Academic</title>
-    <link>https://example.com/publication.html</link>
+    <link>https://example.com/publication/</link>
       <atom:link href="https://example.com/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
-      <link>https://example.com/publication.html</link>
+      <link>https://example.com/publication/</link>
     </image>
     
     <item>
       <title>Cell seeding dynamics in a porous scaffold material designed for meniscus tissue regeneration</title>
-      <link>https://example.com/publication/publi7.html</link>
+      <link>https://example.com/publication/publi7/</link>
       <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi7.html</guid>
+      <guid>https://example.com/publication/publi7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An in-silico approach to meniscus tissue regeneration: Modeling, numerical simulation, and experimental analysis</title>
-      <link>https://example.com/publication/publi6.html</link>
+      <link>https://example.com/publication/publi6/</link>
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi6.html</guid>
+      <guid>https://example.com/publication/publi6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (M2AN)</title>
-      <link>https://example.com/publication/publi4.html</link>
+      <link>https://example.com/publication/publi4/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi4.html</guid>
+      <guid>https://example.com/publication/publi4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations, SMAI: JCM 9 (2023) 227-256</title>
-      <link>https://example.com/publication/publi3.html</link>
+      <link>https://example.com/publication/publi3/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi3.html</guid>
+      <guid>https://example.com/publication/publi3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A mathematical model for meniscus cartilage regeneration (PAMM)</title>
-      <link>https://example.com/publication/publi5.html</link>
+      <link>https://example.com/publication/publi5/</link>
       <pubDate>Mon, 21 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi5.html</guid>
+      <guid>https://example.com/publication/publi5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
-      <link>https://example.com/publication/publi2.html</link>
+      <link>https://example.com/publication/publi2/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi2.html</guid>
+      <guid>https://example.com/publication/publi2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961</title>
-      <link>https://example.com/publication/publi1.html</link>
+      <link>https://example.com/publication/publi1/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi1.html</guid>
+      <guid>https://example.com/publication/publi1/</guid>
       <description></description>
     </item>
     

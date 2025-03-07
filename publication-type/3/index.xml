@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3 | Academic</title>
-    <link>https://example.com/publication-type/3.html</link>
+    <link>https://example.com/publication-type/3/</link>
       <atom:link href="https://example.com/publication-type/3/index.xml" rel="self" type="application/rss+xml" />
     <description>3</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 10 Jun 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://example.com/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>3</title>
-      <link>https://example.com/publication-type/3.html</link>
+      <link>https://example.com/publication-type/3/</link>
     </image>
     
     <item>
       <title>Cell seeding dynamics in a porous scaffold material designed for meniscus tissue regeneration</title>
-      <link>https://example.com/publication/publi7.html</link>
+      <link>https://example.com/publication/publi7/</link>
       <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi7.html</guid>
+      <guid>https://example.com/publication/publi7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An in-silico approach to meniscus tissue regeneration: Modeling, numerical simulation, and experimental analysis</title>
-      <link>https://example.com/publication/publi6.html</link>
+      <link>https://example.com/publication/publi6/</link>
       <pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi6.html</guid>
+      <guid>https://example.com/publication/publi6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A doubly reduced approximation for the solution to PDEs based on a domain truncation and a reduced basis method: Application to Navier-Stokes equations (preprint)</title>
-      <link>https://example.com/publication/publi2.html</link>
+      <link>https://example.com/publication/publi2/</link>
       <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://example.com/publication/publi2.html</guid>
+      <guid>https://example.com/publication/publi2/</guid>
       <description></description>
     </item>
     
