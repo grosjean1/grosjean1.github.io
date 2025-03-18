@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | </title>
-    <link>https://grosjean1.github.io/publication-type/2/</link>
-      <atom:link href="https://grosjean1.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/publication-type/2/</link>
+      <atom:link href="http://localhost:1313/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <url>http://localhost:1313/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>https://grosjean1.github.io/publication-type/2/</link>
+      <link>http://localhost:1313/publication-type/2/</link>
     </image>
     
     <item>
       <title>Error estimate of the non-intrusive reduced basis two-grid method applied to sensitivity analysis (M2AN)</title>
-      <link>https://grosjean1.github.io/publication/publi4/</link>
+      <link>http://localhost:1313/publication/publi4/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi4/</guid>
+      <guid>http://localhost:1313/publication/publi4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis (NIRB) two-grid method with parabolic equations, SMAI: JCM 9 (2023) 227-256</title>
-      <link>https://grosjean1.github.io/publication/publi3/</link>
+      <link>http://localhost:1313/publication/publi3/</link>
       <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi3/</guid>
+      <guid>http://localhost:1313/publication/publi3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Error estimate of the Non-Intrusive Reduced Basis method with finite volume schemes, ESAIM: M2AN 55 (2021) 1941–1961</title>
-      <link>https://grosjean1.github.io/publication/publi1/</link>
+      <link>http://localhost:1313/publication/publi1/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/publication/publi1/</guid>
+      <guid>http://localhost:1313/publication/publi1/</guid>
       <description></description>
     </item>
     

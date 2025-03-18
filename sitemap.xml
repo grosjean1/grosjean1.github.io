@@ -2,231 +2,231 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://grosjean1.github.io/event/</loc>
+    <loc>http://localhost:1313/event/</loc>
     <lastmod>2025-03-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/seminaire-irma-strasbourg/</loc>
+    <loc>http://localhost:1313/talk/seminaire-irma-strasbourg/</loc>
     <lastmod>2025-03-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/</loc>
+    <loc>http://localhost:1313/post/</loc>
     <lastmod>2024-12-16T22:38:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/notebookdynprog/</loc>
+    <loc>http://localhost:1313/post/notebookdynprog/</loc>
     <lastmod>2024-12-16T22:38:00+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/project/</loc>
+    <loc>http://localhost:1313/post/project/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/my-post/</loc>
+    <loc>http://localhost:1313/post/my-post/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/tp5/</loc>
+    <loc>http://localhost:1313/post/tp5/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/tp3ent306/</loc>
+    <loc>http://localhost:1313/post/tp3ent306/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/tp2ent306/</loc>
+    <loc>http://localhost:1313/post/tp2ent306/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/tp4ent306/</loc>
+    <loc>http://localhost:1313/post/tp4ent306/</loc>
     <lastmod>2024-12-13T10:19:20+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/idefix-days-2024/</loc>
+    <loc>http://localhost:1313/talk/idefix-days-2024/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/mathematics-and-art-exploring-connections/</loc>
+    <loc>http://localhost:1313/talk/mathematics-and-art-exploring-connections/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/exo7/</loc>
+    <loc>http://localhost:1313/post/exo7/</loc>
     <lastmod>2024-10-15T08:59:10+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/exo6/</loc>
+    <loc>http://localhost:1313/post/exo6/</loc>
     <lastmod>2024-10-15T08:48:12+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/notebook4/</loc>
+    <loc>http://localhost:1313/post/notebook4/</loc>
     <lastmod>2024-09-24T14:59:19+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/notebook2/</loc>
+    <loc>http://localhost:1313/post/notebook2/</loc>
     <lastmod>2024-09-05T22:05:54+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/notebook1/</loc>
+    <loc>http://localhost:1313/post/notebook1/</loc>
     <lastmod>2024-09-05T22:02:43+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication-type/3/</loc>
+    <loc>http://localhost:1313/publication-type/3/</loc>
     <lastmod>2024-06-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi7/</loc>
+    <loc>http://localhost:1313/publication/publi7/</loc>
     <lastmod>2024-06-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication_types/</loc>
+    <loc>http://localhost:1313/publication_types/</loc>
     <lastmod>2024-06-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/</loc>
+    <loc>http://localhost:1313/publication/</loc>
     <lastmod>2024-06-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/seminaire-idefix-ensta-2024/</loc>
+    <loc>http://localhost:1313/talk/seminaire-idefix-ensta-2024/</loc>
     <lastmod>2024-04-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/seminaire-anedp-au-laboratoire-paul-painleve/</loc>
+    <loc>http://localhost:1313/talk/seminaire-anedp-au-laboratoire-paul-painleve/</loc>
     <lastmod>2024-03-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi6/</loc>
+    <loc>http://localhost:1313/publication/publi6/</loc>
     <lastmod>2024-03-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/seminaire-lamfa/</loc>
+    <loc>http://localhost:1313/talk/seminaire-lamfa/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/seminaire-interne-m3disim-inria/</loc>
+    <loc>http://localhost:1313/talk/seminaire-interne-m3disim-inria/</loc>
     <lastmod>2024-01-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication-type/2/</loc>
+    <loc>http://localhost:1313/publication-type/2/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi4/</loc>
+    <loc>http://localhost:1313/publication/publi4/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi3/</loc>
+    <loc>http://localhost:1313/publication/publi3/</loc>
     <lastmod>2023-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/iccb2023/</loc>
+    <loc>http://localhost:1313/talk/iccb2023/</loc>
     <lastmod>2023-09-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/spp2311-kick-off/</loc>
+    <loc>http://localhost:1313/talk/spp2311-kick-off/</loc>
     <lastmod>2023-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication-type/1/</loc>
+    <loc>http://localhost:1313/publication-type/1/</loc>
     <lastmod>2023-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi5/</loc>
+    <loc>http://localhost:1313/publication/publi5/</loc>
     <lastmod>2023-08-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/gamm-annual-meeting-2023/</loc>
+    <loc>http://localhost:1313/talk/gamm-annual-meeting-2023/</loc>
     <lastmod>2023-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/campus-france-presentation/</loc>
+    <loc>http://localhost:1313/talk/campus-france-presentation/</loc>
     <lastmod>2023-01-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/map5-groupe-de-travail-modelisation-analyse-simulation/</loc>
+    <loc>http://localhost:1313/talk/map5-groupe-de-travail-modelisation-analyse-simulation/</loc>
     <lastmod>2022-11-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/</loc>
+    <loc>http://localhost:1313/teaching/</loc>
     <lastmod>2022-11-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/tuk/</loc>
+    <loc>http://localhost:1313/teaching/tuk/</loc>
     <lastmod>2022-11-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/canum-2022/</loc>
+    <loc>http://localhost:1313/talk/canum-2022/</loc>
     <lastmod>2022-06-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/simulation-and-optimization-for-renewable-marine-energies/</loc>
+    <loc>http://localhost:1313/talk/simulation-and-optimization-for-renewable-marine-energies/</loc>
     <lastmod>2022-05-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/spp2311-kick-off/</loc>
+    <loc>http://localhost:1313/talk/spp2311-kick-off/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi2/</loc>
+    <loc>http://localhost:1313/publication/publi2/</loc>
     <lastmod>2022-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/workshop-mathematics-of-high-performance-computing/</loc>
+    <loc>http://localhost:1313/talk/workshop-mathematics-of-high-performance-computing/</loc>
     <lastmod>2021-09-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/publication/publi1/</loc>
+    <loc>http://localhost:1313/publication/publi1/</loc>
     <lastmod>2021-07-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/can-j-2020/</loc>
+    <loc>http://localhost:1313/talk/can-j-2020/</loc>
     <lastmod>2020-12-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/gtt-ljll/</loc>
+    <loc>http://localhost:1313/talk/gtt-ljll/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/model-order-reduction-summer-school-morss2020/</loc>
+    <loc>http://localhost:1313/talk/model-order-reduction-summer-school-morss2020/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/ensta_apm_5en06_ta/</loc>
+    <loc>http://localhost:1313/teaching/ensta_apm_5en06_ta/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/ensta/</loc>
+    <loc>http://localhost:1313/teaching/ensta/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/ensae/</loc>
+    <loc>http://localhost:1313/teaching/ensae/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/talk/poster-session-50-ljll/</loc>
+    <loc>http://localhost:1313/talk/poster-session-50-ljll/</loc>
     <lastmod>2019-11-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/teaching/sorbonne/</loc>
+    <loc>http://localhost:1313/teaching/sorbonne/</loc>
     <lastmod>2018-09-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/post/notebook3/</loc>
+    <loc>http://localhost:1313/post/notebook3/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/miscellaneous/</loc>
+    <loc>http://localhost:1313/miscellaneous/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/miscellaneous/drawings/</loc>
+    <loc>http://localhost:1313/miscellaneous/drawings/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://grosjean1.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
