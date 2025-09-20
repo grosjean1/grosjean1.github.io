@@ -4448,7 +4448,7 @@ and in python
 &lt;p&gt;link to second TP exercice:&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;link to slides - part I : [slides - part 1]&lt;/p&gt;
+&lt;p&gt;link to slides - part I : &lt;a href=&#34;Slidev0.pdf&#34;&gt;slides - part 1&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to slides - part II : [slides - part 2]&lt;/p&gt;
