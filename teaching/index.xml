@@ -5,12 +5,34 @@
     <link>https://grosjean1.github.io/teaching/</link>
       <atom:link href="https://grosjean1.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teachings</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Teachings</title>
       <link>https://grosjean1.github.io/teaching/</link>
     </image>
+    
+    <item>
+      <title>MS13 at ENSTA-Paris</title>
+      <link>https://grosjean1.github.io/teaching/ensta_ms13/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://grosjean1.github.io/teaching/ensta_ms13/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;link to first TP exercice: &lt;a href=&#34;https://grosjean1.github.io/post/enstams13tp1&#34;&gt;Galerkin-POD + TPFA Finite volume scheme&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link to second TP exercice:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link to slides - part I : &lt;a href=&#34;talkRBcourse.pdf&#34;&gt;slides - part 1&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;link to slides - part II :&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Tutor at Department of Mathematics, TU Kaiserslautern</title>
@@ -107,28 +129,6 @@ The goal of this first TP is to know how to launch jupyter notebook, save a note
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;link to exercice 7 : &lt;a href=&#34;https://grosjean1.github.io/post/exo7&#34;&gt;exo 7&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>APM_5EN5A_TA at ENSTA-Paris</title>
-      <link>https://grosjean1.github.io/teaching/ensta_ms13/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://grosjean1.github.io/teaching/ensta_ms13/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;link to first TP exercice: &lt;a href=&#34;https://grosjean1.github.io/post/enstams13tp1&#34;&gt;Galerkin-POD + TPFA Finite volume scheme&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link to second TP exercice:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link to slides - part I : &lt;a href=&#34;talkRBcourse.pdf&#34;&gt;slides - part 1&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link to slides - part II :&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
