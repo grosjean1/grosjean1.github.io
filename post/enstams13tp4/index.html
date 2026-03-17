@@ -282,7 +282,7 @@
 
   
 
-<meta name="description" content="" />
+<meta name="description" content="TP4 - Aposteriori errors #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import scipy." />
 
 
 
@@ -330,8 +330,8 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="" />
 <meta property="og:url" content="https://grosjean1.github.io/post/enstams13tp4/" />
-<meta property="og:title" content="My Post | " />
-<meta property="og:description" content="" /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:title" content="tp4 | " />
+<meta property="og:description" content="TP4 - Aposteriori errors #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import scipy." /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -368,7 +368,7 @@
     "@type": "WebPage",
     "@id": "https://grosjean1.github.io/post/enstams13tp4/"
   },
-  "headline": "My Post",
+  "headline": "tp4",
   
   "datePublished": "2024-12-13T10:19:20+01:00",
   "dateModified": "2024-12-13T10:19:20+01:00",
@@ -386,7 +386,7 @@
       "url": "https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": ""
+  "description": "TP4 - Aposteriori errors #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import scipy."
 }
 </script>
 
@@ -408,7 +408,7 @@
 
 
   
-  <title>My Post | </title>
+  <title>tp4 | </title>
 
   
   
@@ -999,7 +999,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>My Post</h1>
+  <h1>tp4</h1>
 
   
 
@@ -1027,7 +1027,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    0 min read
+    8 min read
   </span>
   
 
@@ -1055,7 +1055,702 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <h1 id="tp4---aposteriori-errors">TP4 - Aposteriori errors</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Install package</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">fem</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># import packages</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">skfem</span>  <span class="c1"># for Finite Element Method</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">scipy.sparse</span> <span class="k">as</span> <span class="nn">sp</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span> <span class="k">as</span> <span class="nn">spla</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span></code></pre></div><p>============================================================</p>
+<h2 id="pod-galerkin-with-fem">POD-Galerkin with FEM</h2>
+<h3 id="2-poisson-equation---thermal-stationary-conduction">2) Poisson equation  / thermal stationary conduction</h3>
+<p>Elliptic diffusion problem (2D) with scikit-fem:</p>
+<p>$ -\nabla \cdot ( A(x,\mu) \nabla u) = g(x)  \ \mathrm{ on }\ (0, 1)^2$</p>
+<p>$    u(0) = u(1) = 0  (Dirichlet)$</p>
+<pre><code>-------------------
+
+FEM:
+</code></pre>
+<p>Find $u_h = \sum_{i=1}^{\mathcal{N}} u_i w_i$ such that :</p>
+<p>$a(u_h,v_h;\mu)=l(v_h) \forall v_h \in V_h$</p>
+<p>with Dirichlet boundary $u=0$ on $\partial \Omega$.</p>
+<p>Here $\Omega=[0,1] \times [0,1] = \Omega_1 \cup \Omega_2$. We use a uniform Delaunay mesh, with $Nx \times Ny$ degrees of freedom.</p>
+<p>$A(x,\mu)= \mu $  in $ \Omega_1$, and $1 $ in $ \Omega_2$</p>
+<p>$\mu \in [0,10]$</p>
+<p>$\Omega_1=[0,1/2[$</p>
+<p>$g=1$</p>
+<hr>
+<p>Solve the problem for $\mu_1 = 0.5$ and $\mu_2 = 1.5$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">Elliptic diffusion problem (2D) with scikit-fem:
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">$ -</span><span class="se">\n</span><span class="s2">abla \cdot ( A(x,\mu) </span><span class="se">\n</span><span class="s2">abla u) = g(x)  \ \mathrm{ on }\ (0, 1)^2$ 
+</span></span></span><span class="line"><span class="cl"><span class="s2">$    u(0) = u(1) = 0  (Dirichlet)$
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">$\Omega_1=[0,1/2[$
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem</span> <span class="kn">import</span> <span class="n">MeshTri</span><span class="p">,</span> <span class="n">Basis</span><span class="p">,</span> <span class="n">asm</span><span class="p">,</span> <span class="n">enforce</span><span class="p">,</span><span class="n">solve</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.element</span> <span class="kn">import</span> <span class="n">ElementTriP1</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.helpers</span> <span class="kn">import</span> <span class="n">dot</span><span class="p">,</span> <span class="n">grad</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.assembly</span> <span class="kn">import</span> <span class="n">BilinearForm</span><span class="p">,</span> <span class="n">LinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem</span> <span class="kn">import</span> <span class="n">solve</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Problem setup</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Nx</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ny</span> <span class="o">=</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Maillage triangulaire du carré (0,1)^2</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshTri</span><span class="o">.</span><span class="n">init_tensor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Nx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementTriP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Dirichlet boundary DOFs </span>
+</span></span><span class="line"><span class="cl"><span class="n">D</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">get_dofs</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># all dofs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Diffusion coefficient a(x, mu)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Omega_1 = {x &lt; 0.5}, Omega_2 = {x &gt;= 0.5}</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">A_piecewise</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># RHS: g = 1</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@LinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rhs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Bilinear form</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Global a(u,v)</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">diffusion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#x = w.x[0]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">diffusion_1</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># contribution on Omega_1 = {x &lt; 0.5}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">diffusion_2</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># contribution on Omega_2 = {x &gt;= 0.5}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Assembly</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#Instead of global which depend on mu</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A1</span> <span class="o">=</span> <span class="o">...</span><span class="c1"># on Omega_1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A2</span> <span class="o">=</span> <span class="o">...</span>   <span class="c1"># on Omega_2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">=...</span><span class="c1"># g = 1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Solve</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">FEMsolve</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A_bc</span><span class="p">,</span> <span class="n">b_bc</span> <span class="o">=</span> <span class="o">...</span><span class="c1"># enforce boundary condition</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u</span> <span class="o">=</span> <span class="o">...</span><span class="c1"># solve</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Example</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span><span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span> <span class="o">=</span> <span class="n">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">FEMsolve</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Plot</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Solution FEM 2D, mu = </span><span class="si">{</span><span class="n">mu</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&#34;x&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&#34;y&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_4_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34; POD &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;-----------------------------------&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;        Offline                    &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;-----------------------------------&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Construct_RB</span><span class="p">(</span><span class="n">NumberOfSnapshots</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">NumberOfModes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;number of modes: &#34;</span><span class="p">,</span><span class="n">NumberOfModes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="n">Snapshots</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NumberOfSnapshots</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#random coefficient in [0, 1] </span>
+</span></span><span class="line"><span class="cl">        <span class="n">U</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Snapshots</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       
+</span></span><span class="line"><span class="cl">    <span class="c1">#print(&#34;last parameter:&#34;,mu)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## SVD ##</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># on (u,v)_L2</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">massVelocity</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">u</span> <span class="o">*</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L2</span><span class="o">=</span><span class="n">massVelocity</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># same as TP3!</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># same as TP3!</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">ReducedBasis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ReducedBasis</span>
+</span></span></code></pre></div><pre><code>-----------------------------------
+        Offline                    
+-----------------------------------
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## TEST </span>
+</span></span><span class="line"><span class="cl"><span class="n">Nx</span><span class="o">=</span><span class="n">Ny</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshTri</span><span class="o">.</span><span class="n">init_tensor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Nx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementTriP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">Phi</span><span class="o">=</span><span class="n">Construct_RB</span><span class="p">(</span><span class="n">NumberOfSnapshots</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">NumberOfModes</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ReducedBasis</span><span class="o">=</span><span class="n">Phi</span><span class="o">.</span><span class="n">T</span>              
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">im</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ReducedBasis</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ReducedBasis</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>number of modes:  6
+last parameter: 8.403452591188444
+eigenvalues:  [4.79140306e-02 1.76946984e-03 9.73351664e-06 1.32488904e-17
+ 1.08639221e-17 8.56048622e-18]
+Relativ Information Content (must be close to 0):  -6.661338147750939e-16
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_6_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_6_2.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># POD-Galerkin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># assemble full system</span>
+</span></span><span class="line"><span class="cl"><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">solve_fem_rom</span><span class="p">(</span><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">u_rom</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">### show projection of u on VN</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">Nx</span><span class="o">=</span><span class="n">Ny</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshTri</span><span class="o">.</span><span class="n">init_tensor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Nx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Ny</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementTriP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">A1</span><span class="p">,</span><span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span><span class="o">=</span> <span class="n">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">,</span><span class="n">u_proj</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u_proj</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Compare with u </span>
+</span></span><span class="line"><span class="cl"><span class="n">u</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shading</span><span class="o">=</span><span class="s1">&#39;gouraud&#39;</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_8_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_8_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#### Convergence</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span> <span class="mf">0.6</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m_ref</span> <span class="o">=</span> <span class="n">MeshTri</span><span class="o">.</span><span class="n">init_tensor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">250</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">250</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A1_ref</span><span class="p">,</span> <span class="n">A2_ref</span><span class="p">,</span> <span class="n">b_ref</span><span class="p">,</span> <span class="n">basis_ref</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">U_ref</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># True solution = refined solution</span>
+</span></span><span class="line"><span class="cl"><span class="n">u_ref_interp</span> <span class="o">=</span> <span class="n">basis_ref</span><span class="o">.</span><span class="n">interpolator</span><span class="p">(</span><span class="n">U_ref</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># for L2 norm</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">massVelocity</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span> <span class="o">*</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># choose grid sizes to test</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ns</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>  <span class="c1"># adapt as you want</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">Ns</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;n&#34;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    <span class="n">Phi</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">_</span><span class="p">,</span><span class="n">Uproj</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Refined solution interpolated on mesh m</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span>              <span class="c1"># shape = (2, ndof)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_ref_on_mesh</span> <span class="o">=</span> <span class="n">u_ref_interp</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## print error</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L2</span><span class="o">=</span><span class="n">massVelocity</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">true_error</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l2_true_error</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">rom_error</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l2_rom_error</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1"># L2 errors </span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_true</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2_true_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_rom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2_rom_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Plot log-log convergence</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">hs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Ns</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_rom</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_true</span><span class="p">,</span> <span class="s2">&#34;o-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">hs</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span> <span class="s2">&#34;-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$h^2$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_rom</span><span class="p">,</span> <span class="s2">&#34;s-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u_N\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>  <span class="c1"># optional: smaller h to the right</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$h$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$L^2$ error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>n 20
+number of modes:  5
+last parameter: 7.509781052332557
+eigenvalues:  [2.40318666e-02 9.25788586e-04 7.06303709e-06 5.36373774e-18
+ 4.61701375e-18]
+Relativ Information Content (must be close to 0):  -2.220446049250313e-16
+0.00011138323800678854
+n 30
+number of modes:  5
+last parameter: 5.480878231061106
+eigenvalues:  [2.22299945e-02 6.84554478e-04 6.71423146e-06 4.39904411e-18
+ 2.97561363e-18]
+Relativ Information Content (must be close to 0):  -2.220446049250313e-16
+4.85323469705371e-05
+n 40
+number of modes:  5
+last parameter: 9.868641468140527
+eigenvalues:  [2.32851556e-02 9.13440665e-04 6.65241698e-06 5.56358835e-18
+ 4.45544105e-18]
+Relativ Information Content (must be close to 0):  -4.440892098500626e-16
+2.6353402541545168e-05
+n 50
+number of modes:  5
+last parameter: 5.445511126420616
+eigenvalues:  [2.66753732e-02 7.63038252e-04 6.82928888e-06 6.29313835e-18
+ 5.29522154e-18]
+Relativ Information Content (must be close to 0):  -1.1102230246251565e-15
+1.7590322257836863e-05
+n 70
+number of modes:  5
+last parameter: 5.284290397365443
+eigenvalues:  [2.48995374e-02 9.41983614e-04 6.84157210e-06 5.97514581e-18
+ 3.97037118e-18]
+Relativ Information Content (must be close to 0):  -2.220446049250313e-16
+7.130698286881465e-06
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp4_aposteriori-sujet_9_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="aposteriori">Aposteriori</h2>
+<p>$|r_N|_V^2 =r^T M_V^{-1} r$ where $M_V=A1+A2= A$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">scipy.sparse.linalg</span> <span class="kn">import</span> <span class="n">spsolve</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">alpha_LB</span><span class="p">(</span><span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Lower bound of a
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_interior_dofs</span><span class="p">(</span><span class="n">basis</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Interior DDL ( since test functions in H^1_0)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">get_dofs</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">I</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">setdiff1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">basis</span><span class="o">.</span><span class="n">N</span><span class="p">),</span> <span class="n">D</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">D</span><span class="p">,</span> <span class="n">I</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">RB_solve_certified</span><span class="p">(</span><span class="n">Phi</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">basis</span><span class="p">,</span> <span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="n">D</span><span class="p">,</span> <span class="n">I</span> <span class="o">=</span> <span class="n">get_interior_dofs</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Full matrices</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X</span> <span class="o">=</span> <span class="o">...</span>   <span class="c1"># Matrix for the norm ||.||_X</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Interior DDL restriction</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A_I</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">I</span><span class="p">][:,</span> <span class="n">I</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X_I</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">I</span><span class="p">][:,</span> <span class="n">I</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">F_I</span> <span class="o">=</span> <span class="n">F</span><span class="p">[</span><span class="n">I</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Restricted reduced basis</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Phi_I</span> <span class="o">=</span> <span class="n">Phi</span><span class="p">[:,</span><span class="n">I</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ReducedBasis_I</span><span class="o">=</span><span class="n">Phi_I</span><span class="o">.</span><span class="n">T</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Reduce system</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">A_rb</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">F_rb</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">coeff</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># ROM reconstructed</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u_rb_I</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u_rb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">basis</span><span class="o">.</span><span class="n">N</span><span class="p">)</span> <span class="c1"># 0 at the boundary </span>
+</span></span><span class="line"><span class="cl">    <span class="n">u_rb</span><span class="p">[</span><span class="n">I</span><span class="p">]</span> <span class="o">=</span> <span class="n">u_rb_I</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Interior residual</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r_I</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Dual norm of the residual : sqrt(r^T X^{-1} r)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">z</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dual_norm</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Estimateur certifié</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Delta_N</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u_rb</span><span class="p">,</span> <span class="n">coeff</span><span class="p">,</span> <span class="n">dual_norm</span><span class="p">,</span> <span class="n">Delta_N</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">true_error_X_norm</span><span class="p">(</span><span class="n">U_fem</span><span class="p">,</span> <span class="n">U_rb</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">basis</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Error with 
+</span></span></span><span class="line"><span class="cl"><span class="s2">    X = A1 + A2.
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">D</span><span class="p">,</span> <span class="n">I</span> <span class="o">=</span> <span class="n">get_interior_dofs</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X</span> <span class="o">=</span> <span class="n">A1</span> <span class="o">+</span> <span class="n">A2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X_I</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">I</span><span class="p">][:,</span> <span class="n">I</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">e_I</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_X</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">err_X</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span> <span class="mf">0.6</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## test with N=2 and 3 reduced basis functions</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true_L2</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom_L2</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true_X</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">estimator</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">effectivity</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">hs</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Solution de référence sur maillage fin</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Nref</span> <span class="o">=</span> <span class="mi">300</span>
+</span></span><span class="line"><span class="cl"><span class="n">m_ref</span> <span class="o">=</span> <span class="n">MeshTri</span><span class="o">.</span><span class="n">init_tensor</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Nref</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">Nref</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A1_ref</span><span class="p">,</span> <span class="n">A2_ref</span><span class="p">,</span> <span class="n">F_ref</span><span class="p">,</span> <span class="n">basis_ref</span> <span class="o">=</span> <span class="n">FEMassembling</span><span class="p">(</span><span class="n">m_ref</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">U_ref</span> <span class="o">=</span> <span class="n">FEMsolve</span><span class="p">(</span><span class="n">A1_ref</span><span class="p">,</span> <span class="n">A2_ref</span><span class="p">,</span> <span class="n">F_ref</span><span class="p">,</span> <span class="n">basis_ref</span><span class="p">,</span> <span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">u_ref_interp</span> <span class="o">=</span> <span class="n">basis_ref</span><span class="o">.</span><span class="n">interpolator</span><span class="p">(</span><span class="n">U_ref</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">StiffnessMat</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">dot</span><span class="p">(</span><span class="n">grad</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">grad</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">M</span><span class="o">=</span><span class="n">StiffnessMat</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span><span class="n">basis_ref</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># interpolateur de la solution grossière vers le maillage fin</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xref</span> <span class="o">=</span> <span class="n">basis_ref</span><span class="o">.</span><span class="n">doflocs</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">Xref</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">Xref</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-12</span>
+</span></span><span class="line"><span class="cl"><span class="n">interior</span> <span class="o">=</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">tol</span><span class="p">)</span> <span class="o">&amp;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="n">tol</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="mf">1.0</span> <span class="o">-</span> <span class="n">tol</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Boucle de convergence</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -------------------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">Ns</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;n =&#34;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># reduced basis</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Phi</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># FEM + ROM + certification</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># ROM + certification</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_rb</span><span class="p">,</span> <span class="n">coeff</span><span class="p">,</span> <span class="n">dual_norm</span><span class="p">,</span> <span class="n">Delta_N</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#Interpolated FEM on refined mesh</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Xdof</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">u_h_interp</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">interpolator</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_on_ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">basis_ref</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_on_ref</span><span class="p">[</span><span class="n">interior</span><span class="p">]</span> <span class="o">=</span> <span class="n">u_h_interp</span><span class="p">(</span><span class="n">Xref</span><span class="p">[:,</span> <span class="n">interior</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">u_rb_interp</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">interpolator</span><span class="p">(</span><span class="n">U_rb</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_rb_on_ref</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">basis_ref</span><span class="o">.</span><span class="n">N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U_rb_on_ref</span><span class="p">[</span><span class="n">interior</span><span class="p">]</span> <span class="o">=</span> <span class="n">u_rb_interp</span><span class="p">(</span><span class="n">Xref</span><span class="p">[:,</span> <span class="n">interior</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">e_true_ref</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">true_error</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="n">e_rom_ref</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rom_error</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">err_true_L2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">true_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_rom_L2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rom_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># -------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># True error in X norm</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># -------------------------</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_X</span> <span class="o">=</span> <span class="n">true_error_X_norm</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">U_rb</span><span class="p">,</span> <span class="n">A1</span><span class="p">,</span> <span class="n">A2</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">err_true_X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">err_X</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">estimator</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Delta_N</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">eff</span> <span class="o">=</span> <span class="n">Delta_N</span> <span class="o">/</span> <span class="n">err_X</span> <span class="k">if</span> <span class="n">err_X</span> <span class="o">&gt;</span> <span class="mf">1e-14</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+</span></span><span class="line"><span class="cl">    <span class="n">effectivity</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">eff</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  ||u_ref - u_h||_L2 = </span><span class="si">{</span><span class="n">l2_true_error</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  ||u_ref - u_N||_L2 = </span><span class="si">{</span><span class="n">l2_rom_error</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  ||u_h - u_N||_X    = </span><span class="si">{</span><span class="n">err_X</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  ||r_N||_X&#39;         = </span><span class="si">{</span><span class="n">dual_norm</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  Delta_N(mu)        = </span><span class="si">{</span><span class="n">Delta_N</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;  effectivity        = </span><span class="si">{</span><span class="n">eff</span><span class="si">:</span><span class="s2">.3e</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">hs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true_L2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_true_L2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom_L2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_rom_L2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_true_L2</span><span class="p">,</span> <span class="s2">&#34;o-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u_h\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">hs</span><span class="p">,</span> <span class="s2">&#34;--&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$h^2$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_rom_L2</span><span class="p">,</span> <span class="s2">&#34;s-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u_N\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$h$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Error $L^2$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34; FEM / ROM in $L^2$ norm&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true_X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_true_X</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">estimator</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">estimator</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">effectivity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">effectivity</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_true_X</span><span class="p">,</span> <span class="s2">&#34;o-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;True error $\|u_h-u_N\|_X$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">estimator</span><span class="p">,</span> <span class="s2">&#34;s--&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;Estimator $\Delta_N(\mu)$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$h$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;estimator&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Certification a posteriori &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">effectivity</span><span class="p">,</span> <span class="s2">&#34;o-&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$h$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;Effectivity&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Effectivity $\Delta_N / \|u_h-u_N\|_X$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
     
@@ -1081,7 +1776,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;text=My&#43;Post" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;text=tp4" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1098,7 +1793,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;t=My&#43;Post" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;t=tp4" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1117,7 +1812,7 @@
         
       
       <li>
-        <a href="mailto:?subject=My%20Post&amp;body=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=tp4&amp;body=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1134,7 +1829,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;title=My&#43;Post" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;title=tp4" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1151,7 +1846,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=My&#43;Post%20https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=tp4%20https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1168,7 +1863,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;title=My&#43;Post" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp4%2F&amp;title=tp4" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
