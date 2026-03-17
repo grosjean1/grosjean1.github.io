@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 17, 2026 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Hugo Blox Builder 5.9.7" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.26c458e6907dc03073573976b7f4044e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.f6689966c0a10712f95f034011917db0.css" />
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Elise Grosjean" />
+
+
+
+
+
+  
+
+<meta name="description" content="TP3: elliptic 1D equation with FEM #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import matplotlib." />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://grosjean1.github.io/post/enstams13tp3/" />
+<link rel="canonical" href="https://grosjean1.github.io/post/enstams13tp3/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#1565c0" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@GetResearchDev" />
+  <meta property="twitter:creator" content="@GetResearchDev" />
+<meta property="twitter:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+
+
+
+  
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="" />
+<meta property="og:url" content="https://grosjean1.github.io/post/enstams13tp3/" />
+<meta property="og:title" content="tp3 | " />
+<meta property="og:description" content="TP3: elliptic 1D equation with FEM #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import matplotlib." /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2024-12-13T10:19:20&#43;01:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2024-12-13T10:19:20&#43;01:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://grosjean1.github.io/post/enstams13tp3/"
+  },
+  "headline": "tp3",
+  
+  "datePublished": "2024-12-13T10:19:20+01:00",
+  "dateModified": "2024-12-13T10:19:20+01:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Elise Grosjean"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "TP3: elliptic 1D equation with FEM #Install package import sys !{sys.executable} -m pip install numpy !{sys.executable} -m pip install matplotlib !{sys.executable} -m pip install scikit-fem # import packages import skfem # for Finite Element Method import numpy as np import matplotlib."
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>tp3 | </title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="cdfaae457fb9b6723757668d854f022d" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.9e4214442a7711d35691acd58f6f6361.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/"></a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/"></a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#publications"><span>publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#Projects"><span>Projects</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#Experience"><span>Experience</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#talks"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#Teaching"><span>Teaching</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#Miscellaneous"><span>Miscellaneous</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resume.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/thesis.pdf"><span>Thesis manuscript</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/google0eca90bf5d4cf0c4.html"><span>google</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>tp3</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 12, 2024
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="tp3-elliptic-1d-equation-with-fem">TP3: elliptic 1D equation with FEM</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Install package</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
+</span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">scikit</span><span class="o">-</span><span class="n">fem</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># import packages</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">skfem</span>  <span class="c1"># for Finite Element Method</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span></code></pre></div><p>============================================================</p>
+<h3 id="pod-galerkin-with-fem">POD-Galerkin with FEM</h3>
+<h2 id="1-first-exercise-reproduce-course-example">1) First exercise: Reproduce course example</h2>
+<p>Elliptic diffusion problem (1D) with scikit-fem:</p>
+<p>$ -\frac{d}{dx} ( A(\mu) \frac{du}{dx} ) = f(x)  \ \mathrm{ on }\ (0, 0.5)$</p>
+<p>$    u(0) = u(0.5) = 0  (Dirichlet)$</p>
+<pre><code>-------------------
+
+FEM:
+</code></pre>
+<p>Find $u_h = \sum_{i=1}^{\mathcal{N}} u_i w_i$ such that :</p>
+<p>$a(u_h,v_h;\mu)=l(v_h) \forall v_h \in V_h$</p>
+<p>with Dirichlet boundary $u=0$ on $\partial \Omega$.</p>
+<p>Here $\Omega=[0,0.5] $. We use a uniform mesh, with $Ne + 1$ degrees of freedom.</p>
+<p>$A(\mu)=0.1 + \mu$</p>
+<p>$f(x) = sin(2\pi  x) $</p>
+<hr>
+<p>Solve the problem for $\mu_1 = 0.5$ and $mu_2 = 1.5$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">Elliptic diffusion problem (1D) with scikit-fem:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    -d/dx ( a(mu) * du/dx ) = f(x)   on (0, 1)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    u(0) = u(1) = 0  (Dirichlet)
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">We solve it for two parameters mu1, mu2 (via a(mu)),
+</span></span></span><span class="line"><span class="cl"><span class="s2">and also plot an intermediate solution between them.
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem</span> <span class="kn">import</span> <span class="n">MeshLine</span><span class="p">,</span> <span class="n">Basis</span><span class="p">,</span> <span class="n">asm</span><span class="p">,</span> <span class="n">enforce</span><span class="p">,</span><span class="n">solve</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.element</span> <span class="kn">import</span> <span class="n">ElementLineP1</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.helpers</span> <span class="kn">import</span> <span class="n">dot</span><span class="p">,</span> <span class="n">grad</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">skfem.assembly</span> <span class="kn">import</span> <span class="n">BilinearForm</span><span class="p">,</span> <span class="n">LinearForm</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Problem setup</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ne</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># number of mesh points </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshLine</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">Ne</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementLineP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dirichlet boundary DOFs </span>
+</span></span><span class="line"><span class="cl"><span class="n">D</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">get_dofs</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>  <span class="c1"># all dofs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Parameter-dependent diffusion coefficient</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">A_mu</span><span class="p">(</span><span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Sinusoidal source term : compute int f*v</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@LinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rhs</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># sinusoidal source</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">diffusion</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    m= mesh
+</span></span></span><span class="line"><span class="cl"><span class="s2">    return A,b (no parameter dependance)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementLineP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">A</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="n">diffusion</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span> <span class="c1">#assembling stiffness</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span> <span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">A</span><span class="p">,</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">FEMsolve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">mu</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># solve Au=b</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Apply homogeneous Dirichlet at x=0,0.5</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="o">=</span> <span class="n">enforce</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">,</span> <span class="n">D</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">boundary_nodes</span><span class="p">())</span> <span class="c1">#enforce boundary conditions on A and b</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Solve for two mus + an intermediate</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># -----------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu1</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">mu2</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">theta</span> <span class="o">=</span> <span class="o">...</span>  <span class="c1"># intermediate parameter weight </span>
+</span></span><span class="line"><span class="cl"><span class="n">mu_mid</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl"><span class="n">u1</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">u2</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">umid</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#linear combination in solution space:</span>
+</span></span><span class="line"><span class="cl"><span class="n">theta2</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">u_lin</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x_fine</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$u(\mu_1)$, $\mu_1=</span><span class="si">{</span><span class="n">mu1</span><span class="si">}</span><span class="s2">$, $A=</span><span class="si">{</span><span class="n">A_mu</span><span class="p">(</span><span class="n">mu1</span><span class="p">)</span><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">u2</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$u(\mu_2)$, $\mu_2=</span><span class="si">{</span><span class="n">mu2</span><span class="si">}</span><span class="s2">$, $A=</span><span class="si">{</span><span class="n">A_mu</span><span class="p">(</span><span class="n">mu2</span><span class="p">)</span><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">umid</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$u(\mu_</span><span class="se">{{</span><span class="s2">mid</span><span class="se">}}</span><span class="s2">)$, $\mu_</span><span class="se">{{</span><span class="s2">mid</span><span class="se">}}</span><span class="s2">=</span><span class="si">{</span><span class="n">mu_mid</span><span class="si">}</span><span class="s2">$, $A=</span><span class="si">{</span><span class="n">A_mu</span><span class="p">(</span><span class="n">mu_mid</span><span class="p">)</span><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">u_lin</span><span class="p">,</span> <span class="s2">&#34;--&#34;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;linear blend $\alpha_1 u(\mu_1)+\alpha_2\ u(\mu_2)$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;x&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;u(x)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Elliptic diffusion: $-(A(\mu)u&#39;)&#39; = \sin(2\pi x)$,  $u(0)=u(0.5)=0$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34; POD &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">### USE AND ADAPT TP1 FUNCTION...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">Construct_RB</span><span class="p">(</span><span class="n">NumberOfSnapshots</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">NumberOfModes</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    NumberOfSnapshots= Training set
+</span></span></span><span class="line"><span class="cl"><span class="s2">    NumberOfModes= N 
+</span></span></span><span class="line"><span class="cl"><span class="s2">    m=mesh
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;number of modes: &#34;</span><span class="p">,</span><span class="n">NumberOfModes</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">A</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">Snapshots</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NumberOfSnapshots</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mu</span> <span class="o">=</span> <span class="o">...</span> <span class="c1">#random coefficient in [1,10] </span>
+</span></span><span class="line"><span class="cl">        <span class="n">U</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">Snapshots</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;last parameter:&#34;</span><span class="p">,</span><span class="n">mu</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">## SVD ##</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#(u,v)_L2=v^T M u</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">massVelocity</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">u</span> <span class="o">*</span> <span class="n">v</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">L2</span><span class="o">=</span><span class="n">massVelocity</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># We first compute the correlation matrix C_ij = (u_i,u_j)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">CorrelationMatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">NumberOfSnapshots</span><span class="p">,</span> <span class="n">NumberOfSnapshots</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1"># Then, we compute the eigenvalues/eigenvectors of C </span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># sort the eigenvalues</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># retrieve N=NumberOfModes first eigenvalues</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Relativ Information Content (must be close to 0): &#34;</span><span class="p">,</span><span class="n">RIC</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">ReducedBasis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">ReducedBasis</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## test POD</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Ne</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshLine</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">Ne</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">ReducedBasis</span><span class="o">=...</span>     
+</span></span><span class="line"><span class="cl"><span class="n">x_fine</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">ReducedBasis</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$\Phi_1$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">ReducedBasis</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$\Phi_2$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;x&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;u(x)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Elliptic diffusion: $-(A(\mu)u&#39;)&#39; = \sin(2\pi x)$,  $u(0)=u(0.5)=0$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>number of modes:  20
+last parameter: 6.143665788168235
+eigenvalues:  [8.98119945e-04 3.14744663e-19 1.86645528e-19 1.60949973e-19
+ 1.47391858e-19 1.39085760e-19 1.23763284e-19 1.09913265e-19
+ 9.82897092e-20 9.02160650e-20 8.61172372e-20 7.35151495e-20
+ 6.22059607e-20 5.34464736e-20 4.79110054e-20 4.45199243e-20
+ 4.14772357e-20 3.27361686e-20 2.92939093e-20 2.59839285e-20]
+Relativ Information Content (must be close to 0):  -2.220446049250313e-15
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./tp3-sujet_6_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># POD-Galerkin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">solve_fem_rom</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span><span class="n">m</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># assemble full system</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">u_rom</span> <span class="c1">#( or return only u_rom)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span> <span class="n">mu_mid</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ne</span> <span class="o">=</span> <span class="mi">100</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">MeshLine</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">Ne</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">basis</span> <span class="o">=</span> <span class="n">Basis</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">ElementLineP1</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">FEMassembling</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="p">,</span><span class="n">u_proj</span><span class="o">=</span><span class="n">solve_fem_rom</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span> <span class="n">Phi</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">x_fine</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span><span class="n">u_proj</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&#34;$urom_</span><span class="si">{mid}</span><span class="s2">$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">umid</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;$u(\mu_</span><span class="se">{{</span><span class="s2">mid</span><span class="se">}}</span><span class="s2">)$, $\mu_</span><span class="se">{{</span><span class="s2">mid</span><span class="se">}}</span><span class="s2">=</span><span class="si">{</span><span class="n">mu_mid</span><span class="si">}</span><span class="s2">$, $A=</span><span class="si">{</span><span class="n">A_mu</span><span class="p">(</span><span class="n">mu_mid</span><span class="p">)</span><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_fine</span><span class="p">,</span> <span class="n">u_lin</span><span class="p">,</span> <span class="s2">&#34;--&#34;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">fr</span><span class="s2">&#34;linear blend $\alpha_1\ u(\mu_1)+\alpha_2\ u(\mu_2)$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;x&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&#34;u(x)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;Elliptic diffusion: $-(A(\mu)u&#39;)&#39; = \sin(2\pi x)$,  $u(0)=u(0.5)=0$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#### Convergence</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">mu</span> <span class="o">=</span> <span class="mf">0.6</span>
+</span></span><span class="line"><span class="cl"><span class="nd">@BilinearForm</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">massVelocity</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">u</span><span class="o">*</span><span class="n">v</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">err_true</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># choose grid sizes to test</span>
+</span></span><span class="line"><span class="cl"><span class="n">Ns</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="c1"># adapt as you want</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">Ns</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;n&#34;</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">basis</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">L2</span><span class="o">=</span><span class="n">massVelocity</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span><span class="n">basis</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xc</span> <span class="o">=</span> <span class="n">basis</span><span class="o">.</span><span class="n">doflocs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">A</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">U</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Phi</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">_</span><span class="p">,</span><span class="n">Uproj</span><span class="o">=...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">points_new</span> <span class="o">=</span> <span class="n">xc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">u_exact</span><span class="o">=...</span> <span class="c1">#compute true solution</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">    <span class="c1">## print error</span>
+</span></span><span class="line"><span class="cl">    <span class="n">true_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">u_exact</span> <span class="o">-</span> <span class="n">U</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l2_true_error</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">true_error</span><span class="nd">@L2.dot</span><span class="p">(</span><span class="n">true_error</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">l2_true_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rom_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">u_exact</span> <span class="o">-</span> <span class="n">Uproj</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l2_rom_error</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">rom_error</span><span class="nd">@L2.dot</span><span class="p">(</span><span class="n">rom_error</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="c1"># L2 errors (cellwise)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_true</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2_true_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">err_rom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l2_rom_error</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Plot log-log convergence</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ---------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">hs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Ns</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">err_rom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">err_rom</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_true</span><span class="p">,</span> <span class="s2">&#34;o-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">hs</span><span class="o">**...</span><span class="p">),</span> <span class="s2">&#34;-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$h^2$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">err_rom</span><span class="p">,</span> <span class="s2">&#34;s-&#34;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&#34;$\|u_</span><span class="si">{ref}</span><span class="s2">-u_N\|_{L^2}$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>  <span class="c1"># optional: smaller h to the right</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$h$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;$L^2$ error&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h5 id="heading"></h5>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F&amp;text=tp3" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F&amp;t=tp3" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=tp3&amp;body=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F&amp;title=tp3" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=tp3%20https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fenstams13tp3%2F&amp;title=tp3" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://grosjean1.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hue5c65b85e6acd43a0b536d5f250ce9ce_115900_270x270_fill_q75_lanczos_center.jpg" alt="Elise Grosjean"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://grosjean1.github.io/">Elise Grosjean</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">My research interests include numerics, P.D.E analysis, Reduced basis methods, inverse problems.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/grosjean1" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://reducedbasis.github.io" target="_blank" rel="noopener">
+        <i class="fab fa-coding"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2026 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.ff7771056d34ad9f2de2d8f6a466e748.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.7f5ebaff62ae468cff8bb3dd1337bb9b.js"></script>
+
+
+
+  <script src="/js/wowchemy-map.a26e9d2f7238ba5b868384f1c5bc6477.js" type="module"></script>
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.9c0e895144aef5a693008b5c5d450147.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
