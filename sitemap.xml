@@ -2,8 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://grosjean1.github.io/talk/journee-edp-et-analyse-numerique-2026/</loc>
+    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://grosjean1.github.io/event/</loc>
-    <lastmod>2025-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://grosjean1.github.io/talk/seminaire-irma-strasbourg/</loc>
