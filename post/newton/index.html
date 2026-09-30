@@ -282,12 +282,12 @@
 
   
 
-<meta name="description" content="Gradient descent To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2&#43;y^2-xy&#43;2$ that we aim at minimizing on $ \mathbb{R}^2$." />
+<meta name="description" content="Gradient descent vs Newton To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2&#43;y^2-xy&#43;2$ that we aim at minimizing on $ \mathbb{R}^2$." />
 
 
 
-<link rel="alternate" hreflang="en-us" href="https://grosjean1.github.io/post/notebook2/" />
-<link rel="canonical" href="https://grosjean1.github.io/post/notebook2/" />
+<link rel="alternate" hreflang="en-us" href="https://grosjean1.github.io/post/newton/" />
+<link rel="canonical" href="https://grosjean1.github.io/post/newton/" />
 
 
 
@@ -329,18 +329,18 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="" />
-<meta property="og:url" content="https://grosjean1.github.io/post/notebook2/" />
-<meta property="og:title" content="Gradient descent | " />
-<meta property="og:description" content="Gradient descent To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2&#43;y^2-xy&#43;2$ that we aim at minimizing on $ \mathbb{R}^2$." /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:url" content="https://grosjean1.github.io/post/newton/" />
+<meta property="og:title" content="TP Newton | " />
+<meta property="og:description" content="Gradient descent vs Newton To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2&#43;y^2-xy&#43;2$ that we aim at minimizing on $ \mathbb{R}^2$." /><meta property="og:image" content="https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
       property="article:published_time"
-      content="2024-09-05T22:05:54&#43;02:00"
+      content="2024-12-13T10:19:20&#43;01:00"
     />
   
   
-    <meta property="article:modified_time" content="2024-09-05T22:05:54&#43;02:00">
+    <meta property="article:modified_time" content="2024-12-13T10:19:20&#43;01:00">
   
 
 
@@ -366,12 +366,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://grosjean1.github.io/post/notebook2/"
+    "@id": "https://grosjean1.github.io/post/newton/"
   },
-  "headline": "Gradient descent",
+  "headline": "TP Newton",
   
-  "datePublished": "2024-09-05T22:05:54+02:00",
-  "dateModified": "2024-09-05T22:05:54+02:00",
+  "datePublished": "2024-12-13T10:19:20+01:00",
+  "dateModified": "2024-12-13T10:19:20+01:00",
   
   "author": {
     "@type": "Person",
@@ -386,7 +386,7 @@
       "url": "https://grosjean1.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Gradient descent To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \\mathbb{R}^2$."
+  "description": "Gradient descent vs Newton To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \\mathbb{R}^2$."
 }
 </script>
 
@@ -408,7 +408,7 @@
 
 
   
-  <title>Gradient descent | </title>
+  <title>TP Newton | </title>
 
   
   
@@ -428,7 +428,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="5b4a949481c97ac3df94542bb48feedf" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="bdaa37fb1c217b36349ccff65cc95a15" >
 
   
   
@@ -999,7 +999,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Gradient descent</h1>
+  <h1>TP Newton</h1>
 
   
 
@@ -1018,7 +1018,7 @@
     
       
     
-    Sep 9, 2024
+    Dec 12, 2024
   </span>
   
 
@@ -1055,36 +1055,21 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h1 id="gradient-descent">Gradient descent</h1>
+      <h1 id="gradient-descent-vs-newton">Gradient descent vs Newton</h1>
 <p>To find the infimum of an arbitrary cost function, we use here the gradient descent. Let us consider the function $f(x,y)=2x^2+y^2-xy+2$ that we aim at minimizing on $ \mathbb{R}^2$.
 We start by manually compute its gradient and we will display its evolution during gradient descent.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
 </span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
 </span></span><span class="line"><span class="cl"><span class="err">!</span><span class="p">{</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">}</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span>
-</span></span></code></pre></div><pre><code>Requirement already satisfied: numpy in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (2.0.0)
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -&gt; [0m[32;49m24.2[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49m/usr/local/Cellar/jupyterlab/4.2.1/libexec/bin/python -m pip install --upgrade pip[0m
-Requirement already satisfied: matplotlib in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (3.9.1)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (1.2.1)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (0.12.1)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (4.53.1)
-Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (1.4.5)
-Requirement already satisfied: numpy&gt;=1.23 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (2.0.0)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (24.0)
-Requirement already satisfied: pillow&gt;=8 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (10.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (3.1.2)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from matplotlib) (2.9.0.post0)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1/libexec/lib/python3.12/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.16.0)
-
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.0[0m[39;49m -&gt; [0m[32;49m24.2[0m
-[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49m/usr/local/Cellar/jupyterlab/4.2.1/libexec/bin/python -m pip install --upgrade pip[0m
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ddf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">...</span>
 </span></span></code></pre></div><p>We need to define a norm to now how far from the global solution we are.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">norm</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
@@ -1105,7 +1090,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">fxy</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="n">contours</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">inline</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -1117,28 +1102,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./Gradient_descent-Copy1-2_7_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<p>With $\alpha=1$, the solution blows up, a correct choice for $\alpha$ is very important. That is why, we will proceed with Armijo rule:</p>
+</span></span></code></pre></div><p>With $\alpha=1$, the solution blows up, a correct choice for $\alpha$ is very important. That is why, we will proceed with Armijo rule:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="mf">.6</span>
 </span></span><span class="line"><span class="cl"><span class="n">beta</span><span class="o">=</span><span class="mf">1.</span> <span class="c1">#test with beta=1</span>
 </span></span><span class="line"><span class="cl"><span class="n">gamma</span><span class="o">=</span><span class="mf">0.01</span>
@@ -1205,28 +1169,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./Gradient_descent-Copy1-2_10_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Wolfe rule:</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Wolfe rule:</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="mf">.6</span>
 </span></span><span class="line"><span class="cl"><span class="n">c2</span><span class="o">=</span><span class="mf">.8</span>
@@ -1294,7 +1237,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
 </span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">fxy</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="n">contours</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">inline</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
@@ -1306,28 +1249,46 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./Gradient_descent-Copy1-2_12_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+</span></span></code></pre></div><h2 id="newton">Newton</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">## start Newton algorithm</span>
+</span></span><span class="line"><span class="cl"><span class="n">eps</span><span class="o">=</span><span class="mf">1e-6</span>
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span> <span class="c1">#test with alpha=1</span>
+</span></span><span class="line"><span class="cl"><span class="n">x0</span><span class="p">,</span><span class="n">y0</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">evolution</span> <span class="o">=</span> <span class="p">[[</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="n">grad_f</span> <span class="o">=</span> <span class="n">df</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cpt</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="o">...</span> <span class="o">&gt;=</span> <span class="n">eps</span> <span class="ow">and</span> <span class="n">cpt</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">evolution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">grad_f</span> <span class="o">=</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cpt</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">evolution</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">evolution</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Number of Newton iterations:&#34;</span><span class="p">,</span> <span class="n">cpt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Approximate minimizer:&#34;</span><span class="p">,</span> <span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Gradient norm:&#34;</span><span class="p">,</span> <span class="n">norm</span><span class="p">(</span><span class="n">dfxy</span><span class="p">(</span><span class="o">*</span><span class="n">evolution</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">evolution_X</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">evolution_Y</span> <span class="o">=</span> <span class="n">evolution</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Z</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">contours</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">Xx</span><span class="p">,</span> <span class="n">Yy</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">contours</span><span class="p">,</span> <span class="n">inline</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;Evolution of the cost function during gradient descent with level circles&#34;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">evolution_X</span><span class="p">,</span> <span class="n">evolution_Y</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&#34;Cost function&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&#34;upper right&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><h3 id="how-many-iterations-do-we-need-why">How many iterations do we need? Why?</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
     
@@ -1353,7 +1314,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F&amp;text=Gradient&#43;descent" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F&amp;text=TP&#43;Newton" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1370,7 +1331,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F&amp;t=Gradient&#43;descent" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F&amp;t=TP&#43;Newton" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1389,7 +1350,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
         
       
       <li>
-        <a href="mailto:?subject=Gradient%20descent&amp;body=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=TP%20Newton&amp;body=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1406,7 +1367,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F&amp;title=Gradient&#43;descent" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F&amp;title=TP&#43;Newton" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1423,7 +1384,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
       
       
       <li>
-        <a href="whatsapp://send?text=Gradient&#43;descent%20https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=TP&#43;Newton%20https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1440,7 +1401,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/Cellar/jupyterlab/4.2.1
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnotebook2%2F&amp;title=Gradient&#43;descent" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fgrosjean1.github.io%2Fpost%2Fnewton%2F&amp;title=TP&#43;Newton" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
